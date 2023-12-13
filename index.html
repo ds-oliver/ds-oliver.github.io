@@ -10,6 +10,13 @@
 
 <body class="is-preload">
 
+	<!-- Theme Switcher Icon/Button -->
+	<div class="theme-switcher">
+		<button id="theme-toggle" title="Toggle light/dark theme">
+			<span class="icon solid fa-moon"></span> Toggle Theme
+		</button>
+	</div>
+
 	<!-- Header -->
 	<div id="header">
 		<div class="top">
@@ -328,25 +335,44 @@
 		
 			</div>
 		</section>
+	</div>
 		
-		<!-- Footer -->
-		<div id="footer">
-			<!-- Copyright -->
-			<ul class="copyright">
-				<li>&copy; 2023 Hogan Marhoefer. All rights reserved.</li>
-				<li>Design inspired by: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-		
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		
-		</body>
-		
-		</html>
+	<!-- Footer -->
+	<div id="footer">
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; 2023 Hogan Marhoefer. All rights reserved.</li>
+			<li>Design inspired by: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</div>
+	
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<!-- Add this before the closing </body> tag -->
+	<script>
+		function toggleTheme() {
+			let isDark = document.body.classList.toggle('dark-theme');
+			document.getElementById('theme-toggle-icon').className = isDark ? 'icon fa-sun' : 'icon fa-moon';
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		}
+
+		window.onload = () => {
+			let savedTheme = localStorage.getItem('theme');
+			if (savedTheme === 'dark') {
+				document.body.classList.add('dark-theme');
+				document.getElementById('theme-toggle-icon').className = 'icon fa-sun';
+			}
+		};
+	</script>
+
+
+</body>
+
+</html>

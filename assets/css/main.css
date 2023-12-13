@@ -7,6 +7,50 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* Light Theme Styles */
+body {
+	background-color: #ffffff;
+	/* White background */
+	color: #000000;
+	/* Black text */
+}
+
+/* Other default styles */
+header,
+footer,
+nav,
+section {
+	display: block;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+	background-color: #000000;
+	/* Black background */
+	color: #ffffff;
+	/* White text */
+}
+
+body.dark-theme header,
+body.dark-theme footer,
+body.dark-theme nav,
+body.dark-theme section {
+	/* Your dark theme styles for these elements */
+	/* Example: */
+	background-color: #1a1a1a;
+	/* Slightly lighter than black for contrast */
+}
+
+/* You can also define dark theme specific styles for other elements */
+body.dark-theme a {
+	color: #4da6ff;
+	/* Example: Light blue links in dark mode */
+}
+
+body {
+	transition: background-color 0.3s, color 0.3s;
+}
+
 .skill-tag {
 	margin-bottom: 6px;
 	padding: 0;
