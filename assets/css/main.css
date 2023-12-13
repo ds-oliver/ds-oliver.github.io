@@ -2693,3 +2693,84 @@ body {
 .project-description {
 	position: relative;
 }
+
+/* Main container adjustments for padding and max width */
+.container {
+	max-width: 100%;
+	/* Full width on smaller screens */
+	padding: 0 15px;
+	/* Padding on the sides */
+}
+
+/* Table layout for readability */
+.education-table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	/* Helps to avoid table from overflowing the container */
+}
+
+/* Table header for clear sectioning */
+.education-table thead th {
+	background-color: #eaeaea;
+	/* Light background for the header for distinction */
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+	/* Separator for header */
+}
+
+/* Table body for content */
+.education-table tbody td {
+	padding: 10px;
+	vertical-align: middle;
+	/* Centers the content vertically */
+	border-bottom: 1px solid #eee;
+	/* Light border for each row for separation */
+}
+
+/* Images within the table */
+.university-logo {
+	width: auto;
+	/* Keeps image aspect ratio */
+	height: 50px;
+	/* Fixed height for uniformity */
+	display: block;
+	/* Corrects block display */
+	margin: 0 auto;
+	/* Centers the image within the cell */
+}
+
+/* Responsive image for smaller devices */
+@media screen and (max-width: 768px) {
+	.university-logo {
+		height: 30px;
+		/* Smaller height for smaller screens */
+	}
+}
+
+/* Link styling */
+.education-table a {
+	color: #0066cc;
+	/* Standard link color */
+	text-decoration: none;
+	/* No underline to keep it clean */
+	font-weight: bold;
+	/* Make links bold to stand out */
+}
+
+.education-table a:hover {
+	text-decoration: underline;
+	/* Underline on hover for interactivity */
+}
+
+/* Accessibility improvements for screen readers */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 3px dashed #2299dd;
+	/* High contrast outline for focused element */
+	outline-offset: 3px;
+	/* Distance of the outline from the element */
+}
