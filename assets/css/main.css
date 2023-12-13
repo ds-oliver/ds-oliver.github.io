@@ -2701,6 +2701,7 @@ body {
 	padding: 0 15px;
 	/* Padding on the sides */
 }
+
 /* Table layout for readability */
 .education-table {
 	width: 100%;
@@ -2712,11 +2713,9 @@ body {
 /* Table header for clear sectioning */
 .education-table thead th {
 	text-align: left;
-	background-color: #eaeaea;
-	/* Light background for the header for distinction */
+	background-color: #808080; /* Dark grey background for the header for distinction */
 	padding: 10px;
-	border-bottom: 1px solid #ccc;
-	/* Separator for header */
+	border-bottom: 1px solid #ccc; /* Separator for header */
 }
 
 /* Table body for content */
@@ -2743,7 +2742,7 @@ body {
 	display: block;
 	margin: 0 auto;
 	/* Centers the image within the cell */
-	max-height: 300px;
+	max-height: 150px;
 	/* Max height for larger screens, reduce if still too large */
 	max-width: 100%;
 	/* This will ensure the image is responsive and does not overflow its container */
