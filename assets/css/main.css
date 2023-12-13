@@ -2704,6 +2704,7 @@ body {
 
 /* Table layout for readability */
 .education-table {
+	text-align: left;
 	width: 100%;
 	border-collapse: collapse;
 	table-layout: fixed;
@@ -2712,6 +2713,7 @@ body {
 
 /* Table header for clear sectioning */
 .education-table thead th {
+	text-align: left;
 	background-color: #eaeaea;
 	/* Light background for the header for distinction */
 	padding: 10px;
@@ -2721,6 +2723,7 @@ body {
 
 /* Table body for content */
 .education-table tbody td {
+	text-align: left;
 	padding: 10px;
 	vertical-align: top;
 	/* Centers the content vertically */
@@ -2730,6 +2733,7 @@ body {
 
 /* Ensure table cells are centered vertically */
 .education-table td {
+	text-align: left;
 	vertical-align: top;
 	/* Aligns content of <td> in the middle vertically */
 	padding: 10px;
@@ -2741,7 +2745,7 @@ body {
 	display: block;
 	margin: 0 auto;
 	/* Centers the image within the cell */
-	max-height: 100px;
+	max-height: 300px;
 	/* Max height for larger screens, reduce if still too large */
 	max-width: 100%;
 	/* This will ensure the image is responsive and does not overflow its container */
