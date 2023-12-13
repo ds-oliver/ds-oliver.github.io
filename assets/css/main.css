@@ -7,68 +7,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Light Theme Styles */
-body {
-	background-color: #ffffff;
-	/* White background */
-	color: #000000;
-	/* Black text */
-}
-
-/* Other default styles */
-header,
-footer,
-nav,
-section {
-	display: block;
-}
-
-/* Dark Theme Styles */
-body.dark-theme {
-	background-color: #000000;
-	/* Black background */
-	color: #ffffff;
-	/* White text */
-}
-
-body.dark-theme header,
-body.dark-theme footer,
-body.dark-theme nav,
-body.dark-theme section {
-	/* Your dark theme styles for these elements */
-	/* Example: */
-	background-color: #1a1a1a;
-	/* Slightly lighter than black for contrast */
-}
-
-/* You can also define dark theme specific styles for other elements */
-body.dark-theme a {
-	color: #4da6ff;
-	/* Example: Light blue links in dark mode */
-}
-
-body {
-	transition: background-color 0.3s, color 0.3s;
-}
-
-.skill-tag {
-	margin-bottom: 6px;
-	padding: 0;
-	border: 1px solid grey;
-	display: inline-block;
-	border-radius: 25px;
-	background: #ededed;
-}
-
-.project-image .image img {
-	max-width: 100%;
-	height: auto;
-}
-
-.project-description {
-	position: relative;
-}
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -150,7 +88,7 @@ input, select, textarea {
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: #140b04;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -174,7 +112,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
-		color: #666;
+		color: #140b04;
 		line-height: 1.5em;
 	}
 
@@ -184,7 +122,7 @@ input, select, textarea {
 	}
 
 		h1 a strong, h2 a strong, h3 a strong, h4 a strong, h5 a strong, h6 a strong {
-			color: #333;
+			color: #1a1a1a;
 		}
 
 	h2 {
@@ -193,11 +131,11 @@ input, select, textarea {
 	}
 
 		h2.alt {
-			color: #888;
+			color: #1a1a1a;
 		}
 
 			h2.alt strong {
-				color: #666;
+				color: #1a1a1a;
 			}
 
 	h3 {
@@ -2693,3 +2631,65 @@ input, select, textarea {
 				}
 
 	}
+
+/* Light Theme Styles */
+body {
+	background-color: #ffffff;
+	/* White background */
+	color: #000000;
+	/* Black text */
+}
+
+/* Other default styles */
+header,
+footer,
+nav,
+section {
+	display: block;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+	background-color: #000000;
+	/* Black background */
+	color: #ffffff;
+	/* White text */
+}
+
+body.dark-theme header,
+body.dark-theme footer,
+body.dark-theme nav,
+body.dark-theme section {
+	/* Your dark theme styles for these elements */
+	/* Example: */
+	background-color: #1a1a1a;
+	/* Slightly lighter than black for contrast */
+}
+
+/* You can also define dark theme specific styles for other elements */
+body.dark-theme a {
+	color: #4da6ff;
+	/* Example: Light blue links in dark mode */
+}
+
+body {
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.skill-tag {
+	margin-bottom: 6px;
+	padding: 0;
+	border: 1px solid grey;
+	display: inline-block;
+	border-radius: 25px;
+	background: #ededed;
+}
+
+.project-image .image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.project-description {
+	position: relative;
+}
