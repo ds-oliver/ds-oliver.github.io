@@ -2736,26 +2736,27 @@ body {
 	/* Provides spacing within the cells */
 }
 
-/* Style for images within the education table */
+/* Images within the table */
 .university-logo {
 	display: block;
-	/* Ensures that the image is block-level for margin auto to work */
 	margin: 0 auto;
-	/* Centers the image in the cell */
-	height: 50px;
-	/* Fixed height for uniformity */
+	/* Centers the image within the cell */
+	max-height: 50px;
+	/* Max height for larger screens, reduce if still too large */
+	max-width: 100%;
+	/* This will ensure the image is responsive and does not overflow its container */
+	height: auto;
+	/* Maintain aspect ratio */
 	width: auto;
 	/* Maintain aspect ratio */
 }
 
-/* Responsive table and image sizing */
+/* Responsive image for smaller devices */
 @media screen and (max-width: 768px) {
 	.university-logo {
-		height: 30px;
-		/* Smaller height for smaller screens */
+		max-height: 30px;
+		/* Reduced height for smaller screens */
 	}
-
-	/* Add styles for smaller table fonts, padding, etc., as needed */
 }
 
 /* Link styling */
