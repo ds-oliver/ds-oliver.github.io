@@ -2722,7 +2722,7 @@ body {
 /* Table body for content */
 .education-table tbody td {
 	padding: 10px;
-	vertical-align: middle;
+	vertical-align: top;
 	/* Centers the content vertically */
 	border-bottom: 1px solid #eee;
 	/* Light border for each row for separation */
@@ -2730,7 +2730,7 @@ body {
 
 /* Ensure table cells are centered vertically */
 .education-table td {
-	vertical-align: middle;
+	vertical-align: top;
 	/* Aligns content of <td> in the middle vertically */
 	padding: 10px;
 	/* Provides spacing within the cells */
@@ -2741,7 +2741,7 @@ body {
 	display: block;
 	margin: 0 auto;
 	/* Centers the image within the cell */
-	max-height: 50px;
+	max-height: 100px;
 	/* Max height for larger screens, reduce if still too large */
 	max-width: 100%;
 	/* This will ensure the image is responsive and does not overflow its container */
