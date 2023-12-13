@@ -2728,24 +2728,34 @@ body {
 	/* Light border for each row for separation */
 }
 
-/* Images within the table */
-.university-logo {
-	width: auto;
-	/* Keeps image aspect ratio */
-	height: 50px;
-	/* Fixed height for uniformity */
-	display: block;
-	/* Corrects block display */
-	margin: 0 auto;
-	/* Centers the image within the cell */
+/* Ensure table cells are centered vertically */
+.education-table td {
+	vertical-align: middle;
+	/* Aligns content of <td> in the middle vertically */
+	padding: 10px;
+	/* Provides spacing within the cells */
 }
 
-/* Responsive image for smaller devices */
+/* Style for images within the education table */
+.university-logo {
+	display: block;
+	/* Ensures that the image is block-level for margin auto to work */
+	margin: 0 auto;
+	/* Centers the image in the cell */
+	height: 50px;
+	/* Fixed height for uniformity */
+	width: auto;
+	/* Maintain aspect ratio */
+}
+
+/* Responsive table and image sizing */
 @media screen and (max-width: 768px) {
 	.university-logo {
 		height: 30px;
 		/* Smaller height for smaller screens */
 	}
+
+	/* Add styles for smaller table fonts, padding, etc., as needed */
 }
 
 /* Link styling */
