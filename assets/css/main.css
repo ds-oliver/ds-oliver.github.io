@@ -2701,10 +2701,8 @@ body {
 	padding: 0 15px;
 	/* Padding on the sides */
 }
-
 /* Table layout for readability */
 .education-table {
-	text-align: left;
 	width: 100%;
 	border-collapse: collapse;
 	table-layout: fixed;
