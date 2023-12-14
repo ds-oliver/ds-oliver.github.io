@@ -30,7 +30,7 @@ section, summary, time, mark, audio, video {
 		font-weight: 300;
 		line-height: 1.75em;
 		color: #888;
-		
+
 	}
 
 article, aside, details, figcaption, figure,
@@ -1925,8 +1925,13 @@ input, select, textarea {
 		}
 
 		table td {
-			padding: 0.5em 1em 0.5em 1em;
-		}
+				text-align: left;
+				background-color: #1a1a1a;
+				/* Dark grey background for the header for distinction */
+				padding: 10px;
+				border-bottom: 1px solid #000000;
+				/* Separator for header */
+			}
 
 		table th {
 			text-align: left;
