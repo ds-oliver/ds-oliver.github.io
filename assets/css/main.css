@@ -2146,6 +2146,7 @@ input, select, textarea {
 				-webkit-transition: none;
 				-ms-transition: none;
 				transition: none;
+				font-weight: bold; /* Make the text bold */
 			}
 
 				#nav ul li a span {
