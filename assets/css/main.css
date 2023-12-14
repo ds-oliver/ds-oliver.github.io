@@ -2646,22 +2646,32 @@ input, select, textarea {
 				}
 
 	}
-/* Light Theme Styles */
-body.light-theme {
-	background-color: #ffffff;
-	/* White background */
-	color: #000000;
-	/* Black text */
-	/* Additional light theme styles go here */
+
+
+/* Base Typography */
+html,
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 1.6;
+	font-weight: 300;
 }
 
-/* Dark Theme Styles */
+/* Light Theme Enhancements */
+body.light-theme {
+	background-color: #f8f8f8;
+	/* Softer shade of white for better readability */
+	color: #333;
+	/* Darker text for better contrast */
+	/* Rest of your light theme specific styles */
+}
+
+/* Dark Theme Enhancements */
 body.dark-theme {
-	background-color: #000000;
-	/* Black background */
-	color: #ffffff;
-	/* White text */
-	/* Additional dark theme styles go here */
+	background-color: #121212;
+	/* Very dark shade for less eye strain */
+	color: #c7c7c7;
+	/* Soft white for text for better readability */
+	/* Rest of your dark theme specific styles */
 }
 
 /* Theme Toggle Button */
