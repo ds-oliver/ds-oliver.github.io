@@ -1935,7 +1935,7 @@ input, select, textarea {
 
 		table th {
 			text-align: left;
-			padding: 0.5em 1em 0.5em 1em;
+			padding: 10px;
 			color: #fff;
 			background: #222729 url("images/overlay.png");
 		}
