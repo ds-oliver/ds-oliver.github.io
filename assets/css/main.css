@@ -2646,21 +2646,13 @@ input, select, textarea {
 				}
 
 	}
-
 /* Light Theme Styles */
-body {
+body.light-theme {
 	background-color: #ffffff;
 	/* White background */
 	color: #000000;
 	/* Black text */
-}
-
-/* Other default styles */
-header,
-footer,
-nav,
-section {
-	display: block;
+	/* Additional light theme styles go here */
 }
 
 /* Dark Theme Styles */
@@ -2669,26 +2661,46 @@ body.dark-theme {
 	/* Black background */
 	color: #ffffff;
 	/* White text */
+	/* Additional dark theme styles go here */
 }
 
-body.dark-theme header,
-body.dark-theme footer,
-body.dark-theme nav,
-body.dark-theme section {
-	/* Your dark theme styles for these elements */
-	/* Example: */
-	background-color: #1a1a1a;
-	/* Slightly lighter than black for contrast */
+/* Theme Toggle Button */
+.theme-switcher {
+	display: inline-block;
+	/* This can be 'block' or 'flex' as needed */
+	position: fixed;
+	/* Fixed position */
+	z-index: 10;
+	/* Ensure it's above other elements */
+	top: 1em;
+	/* Adjust as per your layout */
+	right: 1em;
+	/* Adjust as per your layout */
+	cursor: pointer;
+	/* To indicate this is clickable */
+	/* Add further styling as needed */
 }
 
-/* You can also define dark theme specific styles for other elements */
-body.dark-theme a {
-	color: #4da6ff;
-	/* Example: Light blue links in dark mode */
+/* Styles for larger screens where you want the toggle to be visible */
+@media screen and (min-width: 769px) {
+	.theme-switcher {
+		display: block;
+		/* Or 'flex', 'inline-block', etc. */
+	}
 }
 
+/* Styles for smaller screens where you may want to hide the toggle */
+@media screen and (max-width: 768px) {
+	.theme-switcher {
+		display: none;
+		/* Hide on small screens */
+	}
+}
+
+/* Transition for theme change */
 body {
 	transition: background-color 0.3s, color 0.3s;
+	/* Transition effects for background and color changes */
 }
 
 .skill-tag {
