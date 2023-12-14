@@ -12,6 +12,83 @@
 	--text-color-dark: #ddd;
 	--bg-color-light: #fff;
 	--bg-color-dark: #333;
+	--bg-color: var(--bg-color-light);
+	--text-color: var(--text-color-light);
+	--bg-color-alt: var(--bg-color-dark);
+	--text-color-alt: var(--text-color-dark);
+	--bg-color-highlight: #E27689;
+	--text-color-highlight: #fff;
+	--bg-color-highlight-alt: #E27689;
+	--text-color-highlight-alt: #fff;
+	--bg-color-accent: #E27689;
+	--text-color-accent: #fff;
+	--bg-color-accent-alt: #E27689;
+	--text-color-accent-alt: #fff;
+	--bg-color-faded: rgba(255, 255, 255, 0.5);
+	--text-color-faded: rgba(0, 0, 0, 0.5);
+	--bg-color-faded-alt: rgba(0, 0, 0, 0.5);
+	--text-color-faded-alt: rgba(255, 255, 255, 0.5);
+	--bg-color-lighter: #f3f3f3;
+	--text-color-lighter: #666;
+	--bg-color-darker: #e6e6e6;
+	--text-color-darker: #999;
+	--bg-color-darkest: #e6e6e6;
+	--text-color-darkest: #999;
+	--bg-color-primary: #E27689;
+	--text-color-primary: #fff;
+	--bg-color-secondary: #E27689;
+	--text-color-secondary: #fff;
+	--bg-color-tertiary: #E27689;
+	--text-color-tertiary: #fff;
+	--bg-color-quaternary: #E27689;
+	--text-color-quaternary: #fff;
+	--bg-color-quinary: #E27689;
+	--text-color-quinary: #fff;
+	--bg-color-senary: #E27689;
+	--text-color-senary: #fff;
+
+	--font-family: "Source Sans Pro", sans-serif;
+	--font-family-mono: "Source Code Pro", monospace;
+	--font-size: 1em;
+	--font-size-small: 0.8em;
+	--font-size-large: 1.25em;
+	--font-size-xlarge: 1.5em;
+	--font-size-xxlarge: 2em;
+	--font-size-xxxlarge: 3em;
+	--font-size-xxxxlarge: 4em;
+	--font-size-xxxxxlarge: 5em;
+	--font-size-xxxxxxlarge: 6em;
+
+	--line-height: 1.5em;
+	--line-height-small: 1.5em;
+	--line-height-large: 1.5em;
+	--line-height-xlarge: 1.5em;
+
+	--border-radius: 0.35em;
+	--border-radius-small: 0.25em;
+
+	--transition-duration: 0.35s;
+	--transition-timing-function: ease-in-out;
+	--transition-delay: 0s;
+
+	--transition: all var(--transition-duration) var(--transition-timing-function) var(--transition-delay);
+	--transition-fast: all 0.15s ease-in-out 0s;
+	--transition-slow: all 0.5s ease-in-out 0s;
+
+	--transition-property: all;
+	--transition-property-none: none;
+
+	--transition-duration-fast: 0.15s;
+	--transition-duration-slow: 0.5s;
+
+	--ms-zoom: 1;
+	--ms-zoom-min: 1;
+	--ms-zoom-max: 1;
+
+	--ms-zoom-min-width: 0;
+	--ms-zoom-max-width: 0;
+
+
 }
 
 html, body, div, span, applet, object,
@@ -2672,44 +2749,89 @@ body.dark-theme {
 	background-color: var(--bg-color-dark);
 	color: var(--text-color-dark);
 }
-
-/* Theme Toggle Button */
-.theme-switcher {
-	display: inline-block;
-	/* This can be 'block' or 'flex' as needed */
-	position: fixed;
-	/* Fixed position */
-	z-index: 10;
-	/* Ensure it's above other elements */
-	top: 1em;
-	/* Adjust as per your layout */
-	right: 1em;
-	/* Adjust as per your layout */
-	cursor: pointer;
-	/* To indicate this is clickable */
-	/* Add further styling as needed */
-}
-
-/* Styles for larger screens where you want the toggle to be visible */
-@media screen and (min-width: 769px) {
-	.theme-switcher {
-		display: block;
-		/* Or 'flex', 'inline-block', etc. */
-	}
-}
-
-/* Styles for smaller screens where you may want to hide the toggle */
-@media screen and (max-width: 768px) {
-	.theme-switcher {
-		display: none;
-		/* Hide on small screens */
-	}
-}
-
-/* Transition for theme change */
+/* Base settings for improved readability */
+html,
 body {
-	transition: background-color 0.3s, color 0.3s;
-	/* Transition effects for background and color changes */
+	font-family: 'Source Sans Pro', sans-serif;
+	line-height: 1.6;
+	font-weight: 400;
+	/* Slightly heavier weight for better legibility */
+}
+
+/* Link Styles for Light Theme */
+body.light-theme a {
+	color: #0056b3;
+	/* A more vivid blue for links */
+}
+
+body.light-theme a:hover,
+body.light-theme a:focus {
+	color: #ff6347;
+	/* A warm color on hover for better visibility */
+}
+
+/* Link Styles for Dark Theme */
+body.dark-theme a {
+	color: #4da6ff;
+	/* A soft blue for links */
+}
+
+body.dark-theme a:hover,
+body.dark-theme a:focus {
+	color: #ffa07a;
+	/* A soft coral for hover states */
+}
+
+/* Theme Toggle Button Enhancement */
+.theme-switcher {
+	background-color: #f0f0f0;
+	/* Light background for the toggle button */
+	color: #333;
+	/* Dark text for contrast */
+	border: 1px solid #ddd;
+	/* Border to make it stand out */
+	padding: 0.5em 1em;
+	/* Padding for better touch targets */
+	border-radius: 0.3em;
+	/* Rounded corners */
+}
+
+/* Improving form elements readability and usability */
+input,
+select,
+textarea,
+button {
+	font-size: 1em;
+	padding: 0.75em;
+	border: 1px solid #ccc;
+	border-radius: 0.3em;
+	box-shadow: none;
+	/* Remove any box-shadow */
+}
+
+/* Tables for better reading */
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table th,
+table td {
+	padding: 0.75em;
+	border: 1px solid #ddd;
+	/* Light border for contrast */
+}
+
+/* Responsive Images */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+	outline: 3px solid #0056b3;
+	outline-offset: 2px;
 }
 
 .skill-tag {
