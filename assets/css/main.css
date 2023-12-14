@@ -2738,6 +2738,8 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 	line-height: 1.6;
 	font-weight: 300;
+	color: #333;
+	/* Opt for a softer color for dark theme and a darker color for light theme */
 }
 
 body.light-theme {
@@ -2912,9 +2914,20 @@ img {
 
 /* Responsive image for smaller devices */
 @media screen and (max-width: 768px) {
-	.university-logo {
-		max-height: 30px;
-		/* Reduced height for smaller screens */
+
+	.container,
+	.button {
+		width: 100%;
+	}
+
+	body {
+		padding: var(--border-radius);
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-size: var(--font-size-large);
 	}
 }
 
@@ -2943,4 +2956,42 @@ textarea:focus {
 	/* High contrast outline for focused element */
 	outline-offset: 3px;
 	/* Distance of the outline from the element */
+}
+
+.content {
+	background-color: var(--bg-color);
+	/* Use the background color based on the theme */
+	color: var(--text-color);
+	/* Use the text color based on the theme */
+	padding: 1em;
+	/* Spacing within the content area */
+	border-radius: var(--border-radius);
+	/* Rounded corners */
+	box-shadow: 0 2px 5px var(--bg-color-faded-alt);
+	/* Shadow for depth, using a semi-transparent black for light theme and semi-transparent white for dark theme */
+	transition: var(--transition);
+	/* Smooth transition for theme change */
+}
+
+.content h1,
+.content h2,
+.content h3 {
+	color: var(--text-color-highlight);
+	/* For headers within content */
+	margin-top: 0.5em;
+	margin-bottom: 0.2em;
+}
+
+.content a {
+	color: var(--bg-color-highlight);
+	/* Links color */
+	text-decoration: none;
+	/* Removes underline */
+}
+
+.content a:hover {
+	color: var(--bg-color-accent);
+	/* Changes color on hover */
+	text-decoration: underline;
+	/* Adds underline on hover */
 }
