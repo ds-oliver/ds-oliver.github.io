@@ -10,9 +10,9 @@
 :root {
 	--text-color-light-theme: rgb(17, 29, 29);
 	--text-color-dark-theme: blanchedalmond;
-	--bg-color-light-theme: #fff;
+	--bg-color-light-theme: whitesmoke;
 	--bg-color-lighter: #f0f0f0;
-	--bg-color-dark-theme: darkslategray;
+	--bg-color-dark-theme: rgb(31, 43, 43);
 	--bg-color-darker: #1a1a1a;
 	--bg-color: var(--bg-color-light);
 	--text-color: var(--text-color-light);
@@ -281,15 +281,6 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    background: #fff; /* No change needed unless you want a different background */
-    font-family: 'Source Sans Pro', sans-serif; /* Consistent with your theme */
-    font-size: 1rem; /* 1rem for better scalability and readability */
-    font-weight: var(--font-weight-normal); /* Using a CSS variable for consistency */
-    line-height: 1.75em; /* Good for readability */
-    color: var(--text-color); /* Use CSS variable for consistency */
-}
-
 body.is-preload *, body.is-preload *:before, body.is-preload *:after {
     -moz-animation: none !important;
     -webkit-animation: none !important;
@@ -372,7 +363,6 @@ a:hover {
     color: var(--bg-color-highlight); /* Highlight color for hover */
     border-bottom-color: transparent;
 }
-
 
 /* Base styles */
 body {
