@@ -12,12 +12,17 @@
 	--text-color-dark-theme: blanchedalmond;
 	--bg-color-light-theme: whitesmoke;
 	--bg-color-lighter: #f0f0f0;
-	--bg-color-dark-theme: rgb(31, 43, 43);
+	--bg-color-dark-theme: rgb(36, 51, 51);
 	--bg-color-darker: #1a1a1a;
 	--bg-color: var(--bg-color-light);
 	--text-color: var(--text-color-light);
 	--bg-color-alt: var(--bg-color-dark);
 	--text-color-alt: var(--text-color-dark);
+
+	--accent-for-skill-tag-bg-dark-theme: var(text-color-dark-theme);
+	--accent-for-skill-tag-text-dark-theme: rgb(17, 29, 29);
+	--accent-for-skill-tag-bg-light-theme: rgb(36, 51, 51);
+	--accent-for-skill-tag-text-light-theme: var(text-color-dark-theme);
 
 	--bg-color-highlight: #E27689;
 	--text-color-highlight: #fff;
@@ -170,7 +175,6 @@ th {
   color: var(--text-color-light);
 }
 
-
 mark {
 	background-color: transparent;
 	color: inherit;
@@ -201,6 +205,12 @@ input, select, textarea {
 	display: inline-block;
 	border-radius: 25px;
 	background: #ededed;
+}
+
+/* Skill tag for dark theme */
+body.dark-theme .skill-tag {
+	border: var(--table-border-color-dark-theme);
+	background: ;
 }
 
 .project-image .image img {
