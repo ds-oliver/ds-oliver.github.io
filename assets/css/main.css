@@ -2096,6 +2096,8 @@ br.clear {
 	border-collapse: collapse;
 	table-layout: fixed;
 	/* Helps to avoid table from overflowing the container */
+	overflow-x: auto; /* Enables horizontal scrolling */
+	display: block; /* Tables are by default inline-block, changing this to block enables scrolling */
 }
 
 /* Table header for clear sectioning */
