@@ -141,6 +141,32 @@ body.dark-theme a:focus {
 	top: 1em;
 	right: 1em; /* Align to the right side */
 	/* left: auto; Remove the left alignment if it's there */
+	cursor: pointer;	
+}
+
+.theme-toggle .fa-sun {
+  color: yellow; /* Color for light mode icon */
+  display: block; /* Show sun by default */
+}
+
+.theme-toggle .fa-moon {
+  color: darkblue; /* Color for dark mode icon */
+  display: none; /* Hide moon by default */
+}
+
+/* When the dark theme is active, hide the sun icon and show the moon icon */
+body.dark-theme .theme-toggle .fa-sun {
+  display: none;
+}
+
+body.dark-theme .theme-toggle .fa-moon {
+  display: block;
+}
+
+/* Toggle when active/dark theme is applied */
+body.dark-theme .theme-toggle {
+  color: #ffffff; /* Adjust color for dark theme */
+  /* additional styles */
 }
 
 /* Improving form elements readability and usability */
