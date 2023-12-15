@@ -20,9 +20,12 @@
 	--text-color-alt: var(--text-color-dark);
 
 	--accent-for-skill-tag-bg-dark-theme: var(text-color-dark-theme);
-	--accent-for-skill-tag-text-dark-theme: rgb(17, 29, 29);
+	--text-for-skill-tag-text-dark-theme: rgb(17, 29, 29);
 	--accent-for-skill-tag-bg-light-theme: rgb(36, 51, 51);
-	--accent-for-skill-tag-text-light-theme: var(text-color-dark-theme);
+	--text-for-skill-tag-text-light-theme: var(text-color-dark-theme);
+	--border-for-skill-tag: rgb(251, 87, 87);
+
+
 
 	--bg-color-highlight: #E27689;
 	--text-color-highlight: #fff;
@@ -201,16 +204,23 @@ input, select, textarea {
 .skill-tag {
 	margin-bottom: 6px;
 	padding: 0;
-	border: 1px solid rgb(251, 87, 87);
+	border: var(--border-for-skill-tag);
 	display: inline-block;
 	border-radius: 25px;
-	background: #ededed;
 }
 
 /* Skill tag for dark theme */
 body.dark-theme .skill-tag {
 	border: var(--table-border-color-dark-theme);
-	background: ;
+	background: var(--accent-for-skill-tag-bg-dark-theme);
+	color: var(--text-for-skill-tag-text-dark-theme);
+}
+
+/* Skill tag for light theme */
+body.light-theme .skill-tag {
+	border: var(--table-border-color-light-theme);
+	background: var(--accent-for-skill-tag-bg-light-theme);
+	color: var(--text-for-skill-tag-text-light-theme);
 }
 
 .project-image .image img {
