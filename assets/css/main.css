@@ -90,168 +90,6 @@
 
 }
 
-/* Base styles */
-body {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 1rem; /* using relative units for better responsiveness */
-	font-weight: var(--font-weight-normal);
-	line-height: 1.75em;
-	color: var(--text-color-dark-theme);
-	background-color: var(--bg-color-dark-theme); /* Default background color */
-	-webkit-text-size-adjust: none;
-
-}
-
-/* Body classes for theme switching */
-body.light-theme {
-	background-color: var(--bg-color-light-theme);
-	color: var(--text-color-light-theme);
-}
-
-/* Light theme table styles */
-body.light-theme table {
-	border-color: var(--table-border-color-light-theme);
-	color: var(--text-color-light-theme);
-}
-
-body.light-theme table th {
-	border-color: var(--table-border-color-light-theme);
-	background-color: var(--table-header-bg-color-light-theme);
-	color: var(--text-color-light-theme);
-}
-
-body.light-theme table tr:nth-child(even) {
-	background-color: var(--table-even-row-bg-color-light-theme);
-}
-
-body.light-theme table tr:nth-child(odd) {
-	background-color: var(--table-odd-row-bg-color-light-theme);
-}
-
-body.light-theme table tr:hover {
-	background-color: var(--table-hover-row-bg-color-light-theme);
-}
-
-/* Link Styles for Light Theme */
-body.light-theme a {
-	color: var(--table-link-color-light);
-	/* A more vivid blue for links */
-}
-
-body.light-theme a:hover,
-body.light-theme a:focus {
-	color: var(--table-hover-row-bg-color-light);
-	/* A warm color on hover for better visibility */
-}
-
-/* Dark theme table styles */
-
-body.dark-theme {
-	background-color: var(--bg-color-dark);
-	color: var(--text-color-dark);
-}
-
-/* Table layout for readability */
-body.dark-theme table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    overflow-x: auto;
-    display: block;
-	border-color: var(--table-border-color-dark);
-}
-
-/* Table header for clear sectioning */
-body.dark-theme table thead th {
-    text-align: left;
-    background-color: var(--table-header-bg-color-dark);
-    padding: 10px;
-    border-bottom: 1px solid var(--table-border-color-dark);
-}
-
-/* Table body for content */
-body.dark-theme table tbody td {
-    text-align: left;
-    padding: 10px;
-    vertical-align: top;
-    border-bottom: 1px solid var(--table-border-color-dark);
-}
-
-/* Ensure table cells are centered vertically */
-body.dark-theme table td {
-    text-align: left;
-    vertical-align: top;
-    padding: 10px;
-}
-
-body.dark-theme table tr:nth-child(even) {
-	background-color: var(--table-even-row-bg-color-dark);
-}
-
-body.dark-theme table tr:nth-child(odd) {
-	background-color: var(--table-odd-row-bg-color-dark);
-}
-
-body.dark-theme table tr:hover {
-	background-color: var(--table-hover-row-bg-color-dark);
-}
-
-/* Link Styles for Dark Theme */
-body.dark-theme a {
-	color: var(--table-link-color-dark);
-	/* A soft blue for links */
-}
-
-body.dark-theme a:hover,
-body.dark-theme a:focus {
-	color: var(--table-hover-row-bg-color-dark);
-	/* A soft coral for hover states */
-}
-
-/* Theme Toggle Button Enhancement */
-.theme-toggle {
-	background-color: #f0f0f0;
-	/* Light background for the toggle button */
-	color: #333;
-	/* Dark text for contrast */
-	border: 1px solid #ccc;
-	/* Border to make it stand out */
-	padding: 0.5em 1em; 
-	/* Padding for better touch targets */
-	border-radius: 0.3em;
-	/* Rounded corners */
-	z-index: 1000;
-	position: fixed;
-	/* Fixed at the right on the page */
-	top: 1em;
-	right: 1em; /* Align to the right side */
-	/* left: auto; Remove the left alignment if it's there */
-	cursor: pointer;	
-}
-
-.theme-toggle .fa-sun {
-  color: wheat; /* Color for light mode icon */
-  display: block; /* Show sun by default */
-}
-
-.theme-toggle .fa-moon {
-  color: darkblue; /* Color for dark mode icon */
-  display: none; /* Hide moon by default */
-}
-
-/* When the dark theme is active, hide the sun icon and show the moon icon */
-body.dark-theme .theme-toggle .fa-sun {
-  display: none;
-}
-
-/* When the light theme is active, hide the moon icon and show the sun icon */
-body.light-theme .theme-toggle .fa-moon {
-  display: none;
-}
-
-body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
-	color: var(--text-color-dark);
-}
 
 /* Improving form elements readability and usability */
 input,
@@ -509,6 +347,7 @@ header, footer {
 
 header > p, footer > p {
     margin: 1em 0 0 0;
+	
 }
 
 /* Text Styles */
@@ -532,6 +371,170 @@ a {
 a:hover {
     color: var(--bg-color-highlight); /* Highlight color for hover */
     border-bottom-color: transparent;
+}
+
+
+/* Base styles */
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1rem; /* using relative units for better responsiveness */
+	font-weight: var(--font-weight-normal);
+	line-height: 1.75em;
+	color: var(--text-color-dark-theme);
+	background-color: var(--bg-color-dark-theme); /* Default background color */
+	-webkit-text-size-adjust: none;
+
+}
+
+/* Body classes for theme switching */
+body.light-theme {
+	background-color: var(--bg-color-light-theme);
+	color: var(--text-color-light-theme);
+}
+
+/* Light theme table styles */
+body.light-theme table {
+	border-color: var(--table-border-color-light-theme);
+	color: var(--text-color-light-theme);
+}
+
+body.light-theme table th {
+	border-color: var(--table-border-color-light-theme);
+	background-color: var(--table-header-bg-color-light-theme);
+	color: var(--text-color-light-theme);
+}
+
+body.light-theme table tr:nth-child(even) {
+	background-color: var(--table-even-row-bg-color-light-theme);
+}
+
+body.light-theme table tr:nth-child(odd) {
+	background-color: var(--table-odd-row-bg-color-light-theme);
+}
+
+body.light-theme table tr:hover {
+	background-color: var(--table-hover-row-bg-color-light-theme);
+}
+
+/* Link Styles for Light Theme */
+body.light-theme a {
+	color: var(--table-link-color-light);
+	/* A more vivid blue for links */
+}
+
+body.light-theme a:hover,
+body.light-theme a:focus {
+	color: var(--table-hover-row-bg-color-light);
+	/* A warm color on hover for better visibility */
+}
+
+/* Dark theme table styles */
+
+body.dark-theme {
+	background-color: var(--bg-color-dark);
+	color: var(--text-color-dark);
+}
+
+/* Table layout for readability */
+body.dark-theme table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    overflow-x: auto;
+    display: block;
+	border-color: var(--table-border-color-dark);
+}
+
+/* Table header for clear sectioning */
+body.dark-theme table thead th {
+    text-align: left;
+    background-color: var(--table-header-bg-color-dark);
+    padding: 10px;
+    border-bottom: 1px solid var(--table-border-color-dark);
+}
+
+/* Table body for content */
+body.dark-theme table tbody td {
+    text-align: left;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid var(--table-border-color-dark);
+}
+
+/* Ensure table cells are centered vertically */
+body.dark-theme table td {
+    text-align: left;
+    vertical-align: top;
+    padding: 10px;
+}
+
+body.dark-theme table tr:nth-child(even) {
+	background-color: var(--table-even-row-bg-color-dark);
+}
+
+body.dark-theme table tr:nth-child(odd) {
+	background-color: var(--table-odd-row-bg-color-dark);
+}
+
+body.dark-theme table tr:hover {
+	background-color: var(--table-hover-row-bg-color-dark);
+}
+
+/* Link Styles for Dark Theme */
+body.dark-theme a {
+	color: var(--table-link-color-dark);
+	/* A soft blue for links */
+}
+
+body.dark-theme a:hover,
+body.dark-theme a:focus {
+	color: var(--table-hover-row-bg-color-dark);
+	/* A soft coral for hover states */
+}
+
+/* Theme Toggle Button Enhancement */
+.theme-toggle {
+	background-color: #f0f0f0;
+	/* Light background for the toggle button */
+	color: #333;
+	/* Dark text for contrast */
+	border: 1px solid #ccc;
+	/* Border to make it stand out */
+	padding: 0.5em 1em; 
+	/* Padding for better touch targets */
+	border-radius: 0.3em;
+	/* Rounded corners */
+	z-index: 1000;
+	position: fixed;
+	/* Fixed at the right on the page */
+	top: 1em;
+	right: 1em; /* Align to the right side */
+	/* left: auto; Remove the left alignment if it's there */
+	cursor: pointer;	
+}
+
+.theme-toggle .fa-sun {
+  color: wheat; /* Color for light mode icon */
+  display: block; /* Show sun by default */
+}
+
+.theme-toggle .fa-moon {
+  color: darkblue; /* Color for dark mode icon */
+  display: none; /* Hide moon by default */
+}
+
+/* When the dark theme is active, hide the sun icon and show the moon icon */
+body.dark-theme .theme-toggle .fa-sun {
+  display: none;
+}
+
+/* When the light theme is active, hide the moon icon and show the sun icon */
+body.light-theme .theme-toggle .fa-moon {
+  display: none;
+}
+
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
+	color: var(--text-color-dark);
 }
 
 /* Subscript and Superscript */
