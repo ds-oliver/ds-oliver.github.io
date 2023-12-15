@@ -341,28 +341,6 @@ header > p, footer > p {
 	
 }
 
-.skill-tag {
-	margin-bottom: 6px;
-	padding: 0;
-	border: var(--border-for-skill-tag);
-	display: inline-block;
-	border-radius: 25px;
-}
-
-/* Skill tag for dark theme */
-body.dark-theme .skill-tag {
-	border: var(--border-for-skill-tag);
-	background: var(--accent-for-skill-tag-bg-dark-theme);
-	color: var(--text-for-skill-tag-text-dark-theme);
-}
-
-/* Skill tag for light theme */
-body.light-theme .skill-tag {
-	border: var(--border-for-skill-tag);
-	background: var(--accent-for-skill-tag-bg-light-theme);
-	color: var(--text-for-skill-tag-text-light-theme);
-}
-
 /* Text Styles */
 strong, b {
     font-weight: var(--font-weight-bold);
@@ -2536,6 +2514,30 @@ br.clear {
 			#main > section.four {
 				background-color: #e8edec;
 			}
+
+
+.skill-tag {
+	margin-bottom: 6px;
+	padding: 0;
+	border: var(--border-for-skill-tag);
+	display: inline-block;
+	border-radius: 25px;
+}
+
+/* Skill tag for dark theme */
+body.dark-theme .skill-tag {
+	border: var(--border-for-skill-tag);
+	background: var(--accent-for-skill-tag-bg-dark-theme);
+	color: var(--text-for-skill-tag-text-dark-theme);
+}
+
+/* Skill tag for light theme */
+body.light-theme .skill-tag {
+	border: var(--border-for-skill-tag);
+	background: var(--accent-for-skill-tag-bg-light-theme);
+	color: var(--text-for-skill-tag-text-light-theme);
+}
+
 
 /* Wide */
 
