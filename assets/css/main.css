@@ -124,7 +124,7 @@ body.dark-theme a:focus {
 }
 
 /* Theme Toggle Button Enhancement */
-.theme-switcher {
+.theme-toggle {
 	background-color: #f0f0f0;
 	/* Light background for the toggle button */
 	color: #333;
