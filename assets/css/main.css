@@ -96,6 +96,17 @@
 
 }
 
+/* Base styles */
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1rem; /* using relative units for better responsiveness */
+	font-weight: var(--font-weight-normal);
+	line-height: 1.75em;
+	color: var(--text-color-dark-theme);
+	background-color: var(--bg-color-dark-theme); /* Default background color */
+	-webkit-text-size-adjust: none;
+
+}
 
 /* Improving form elements readability and usability */
 input,
@@ -362,18 +373,6 @@ a {
 a:hover {
     color: var(--bg-color-highlight); /* Highlight color for hover */
     border-bottom-color: transparent;
-}
-
-/* Base styles */
-body {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 1rem; /* using relative units for better responsiveness */
-	font-weight: var(--font-weight-normal);
-	line-height: 1.75em;
-	color: var(--text-color-dark-theme);
-	background-color: var(--bg-color-dark-theme); /* Default background color */
-	-webkit-text-size-adjust: none;
-
 }
 
 /* Body classes for theme switching */
