@@ -49,15 +49,13 @@
 
 	--font-family: "Source Sans Pro", sans-serif;
 	--font-family-mono: "Source Code Pro", monospace;
-	--font-size: 1em;
-	--font-size-small: 0.8em;
-	--font-size-large: 1.25em;
-	--font-size-xlarge: 1.5em;
-	--font-size-xxlarge: 2em;
-	--font-size-xxxlarge: 3em;
-	--font-size-xxxxlarge: 4em;
-	--font-size-xxxxxlarge: 5em;
-	--font-size-xxxxxxlarge: 6em;
+	--base-font-size: 16px;
+	font-size: var(--base-font-size);
+
+	/* font weight */
+	--font-weight-light: 300;
+	--font-weight-normal: 400;
+	--font-weight-bold: 600;
 
 	--line-height: 1.5em;
 	--line-height-small: 1.5em;
@@ -91,61 +89,83 @@
 
 }
 
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
-		text-align: left;
-		background-color: #1a1a1a;
-		/* Dark grey background for the header for distinction */
-		padding: 10px;
-		border-bottom: 1px solid #000000;
-		/* Separator for header */
-		vertical-align: left;
-		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 19pt;
-		font-weight: 300;
-		line-height: 1.75em;
-		color: #888;
+/* Base styles */
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1rem; /* using relative units for better responsiveness */
+	font-weight: var(--font-weight-normal);
+	line-height: 1.75em;
+	color: #888;
+	background-color: #1a1a1a; /* Default background color */
+	-webkit-text-size-adjust: none;
 
-	}
+}
+
+/* Box-sizing border-box for all elements */
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/* Specific element styles */
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold; /* Make headings stand out */
+	color: #333; /* Darker color for contrast */
+}
+
+/* Link styles */
+a {
+	color: #0056b3;
+	text-decoration: none; /* No underline by default */
+	transition: color .3 ease;
+}
+
+a:hover {
+	text-decoration: underline; /* Underline on hover for interactivity */
+}
+
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
-
-body {
-	line-height: 1;
-}
 
 ol, ul {
 	list-style: none;
 }
 
 blockquote, q {
-	quotes: none;
+  quotes: initial;
+  padding-left: 1em;
+  border-left: 2px solid var(--text-color-faded);
+  margin-left: 0;
+  font-style: italic;
 }
-
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+th, td {
+  border: 1px solid var(--bg-color-lighter);
+  padding: 0.5em;
+}
+th {
+  background-color: var(--bg-color-darker);
+  color: var(--text-color-light);
 }
 
-body {
-	-webkit-text-size-adjust: none;
-}
 
 mark {
 	background-color: transparent;
@@ -166,189 +186,166 @@ input, select, textarea {
 
 /* Basic */
 
-	html {
-		box-sizing: border-box;
-	}
+html {
+    box-sizing: border-box;
+}
 
-	*, *:before, *:after {
-		box-sizing: inherit;
-	}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
-	body {
-		background: #fff;
-		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 19pt;
-		font-weight: 300;
-		line-height: 1.75em;
-		color: #140b04;
-	}
+body {
+    background: #fff; /* No change needed unless you want a different background */
+    font-family: 'Source Sans Pro', sans-serif; /* Consistent with your theme */
+    font-size: 1rem; /* 1rem for better scalability and readability */
+    font-weight: var(--font-weight-normal); /* Using a CSS variable for consistency */
+    line-height: 1.75em; /* Good for readability */
+    color: var(--text-color); /* Use CSS variable for consistency */
+}
 
-		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-			-moz-animation: none !important;
-			-webkit-animation: none !important;
-			-ms-animation: none !important;
-			animation: none !important;
-			-moz-transition: none !important;
-			-webkit-transition: none !important;
-			-ms-transition: none !important;
-			transition: none !important;
-		}
+body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+    -moz-animation: none !important;
+    -webkit-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+}
 
-	input, textarea, select {
-		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 19pt;
-		font-weight: 300;
-		line-height: 1.75em;
-		color: #888;
-	}
+/* Input Styles */
+input, textarea, select {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.75em;
+    color: var(--text-color-lighter); /* Using variable for consistency */
+}
 
-	h1, h2, h3, h4, h5, h6 {
-		font-weight: 300;
-		color: #140b04;
-		line-height: 1.5em;
-	}
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold); /* Bold for headings */
+    color: var(--text-color); /* Consistent text color */
+    line-height: 1.5em;
+}
 
-	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-		color: inherit;
-		text-decoration: none;
-	}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+    text-decoration: none;
+}
 
-		h1 a strong, h2 a strong, h3 a strong, h4 a strong, h5 a strong, h6 a strong {
-			color: #1a1a1a;
-		}
+h1 a strong, h2 a strong, h3 a strong, h4 a strong, h5 a strong, h6 a strong {
+    color: var(--text-color-darker); /* Slightly darker for emphasis */
+}
 
-	h2 {
-		font-size: 2em;
-		letter-spacing: -1px;
-	}
+/* Specific Heading Adjustments */
+h2 {
+    font-size: 2em;
+    letter-spacing: -1px;
+}
 
-		h2.alt {
-			color: #1a1a1a;
-		}
+h2.alt, h2.alt strong {
+    color: var(--text-color-darker);
+}
 
-			h2.alt strong {
-				color: #1a1a1a;
-			}
+h3 {
+    font-size: 1.5em;
+}
 
-	h3 {
-		font-size: 1.5em;
-	}
+/* Structural Elements */
+header, footer {
+    margin: 0 0 2em 0;
+}
 
-	header {
-		margin: 0 0 2em 0;
-	}
+header > p, footer > p {
+    margin: 1em 0 0 0;
+}
 
-		header > p {
-			margin: 1em 0 0 0;
-		}
+/* Text Styles */
+strong, b {
+    font-weight: var(--font-weight-bold);
+    color: var(--text-color-lighter);
+}
 
-	footer {
-		margin: 2em 0 0 0;
-	}
+em, i {
+    font-style: italic;
+}
 
-	strong, b {
-		font-weight: 300;
-		color: #666;
-	}
+/* Link Styles */
+a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
+    transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+}
 
-	em, i {
-		font-style: italic;
-	}
+a:hover {
+    color: var(--bg-color-highlight); /* Highlight color for hover */
+    border-bottom-color: transparent;
+}
 
-	a {
-		text-decoration: none;
-		color: inherit;
-		border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
-		-moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		-webkit-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		-ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-		outline: 0;
-	}
+/* Subscript and Superscript */
+sub, sup {
+    position: relative;
+    font-size: 0.8em; /* Smaller font size for sub/sup */
+}
 
-		a:hover {
-			color: #E27689;
-			border-bottom-color: rgba(255, 255, 255, 0);
-		}
+sub { top: 0.4em; }
+sup { top: -0.4em; }
 
-	sub {
-		position: relative;
-		top: 0.5em;
-		font-size: 0.8em;
-	}
+/* Horizontal Rule */
+hr {
+    border: 0;
+    border-top: solid 1px var(--bg-color-darker);
+}
 
-	sup {
-		position: relative;
-		top: -0.5em;
-		font-size: 0.8em;
-	}
+/* Blockquote */
+blockquote {
+    border-left: solid 0.5em var(--bg-color-darker);
+    padding: 1em 0 1em 2em;
+    font-style: italic;
+    background-color: var(--bg-color-lighter);
+}
 
-	hr {
-		border: 0;
-		border-top: solid 1px #ddd;
-	}
+/* Lists, Descriptions, and Tables */
+p, ul, ol, dl, table {
+    margin-bottom: 2em;
+    width: 100%; 
+    max-width: 100%;
+}
 
-	blockquote {
-		border-left: solid 0.5em #ddd;
-		padding: 1em 0 1em 2em;
-		font-style: italic;
-	}
-
-	p, ul, ol, dl, table {
-		margin-bottom: 2em;
-	}
-
-	br.clear {
-		clear: both;
-	}
-
+/* Clearing Floats */
+br.clear {
+    clear: both;
+}
 /* Container */
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 90%; /* Set to a percentage for better responsiveness */
+    padding: 0 1rem; /* Adding padding for spacing inside the container */
+}
 
-	.container {
-		margin: 0 auto;
-		max-width: 100%;
-		width: 1400px;
-	}
+/* Media Queries for Responsive Adjustments */
+@media screen and (min-width: 961px) {
+    .container {
+        width: 80%; /* Slightly smaller width for larger screens */
+    }
+}
 
-		@media screen and (min-width: 961px) and (max-width: 1880px) {
+@media screen and (max-width: 960px) {
+    .container {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
 
-			.container {
-				width: 1200px;
-			}
-
-		}
-
-		@media screen and (min-width: 961px) and (max-width: 1620px) {
-
-			.container {
-				width: 960px;
-			}
-
-		}
-
-		@media screen and (min-width: 961px) and (max-width: 1320px) {
-
-			.container {
-				width: 100%;
-			}
-
-		}
-
-		@media screen and (max-width: 960px) {
-
-			.container {
-				width: 100%;
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			.container {
-				width: 100%;
-			}
-
-		}
+@media screen and (max-width: 736px) {
+    .container {
+        width: 100%; /* Maintaining full width for mobile devices */
+        padding: 0 0.5rem; /* Adjust padding for smaller screens */
+    }
+}
 
 /* Row */
 
@@ -395,101 +392,30 @@ input, select, textarea {
 			order: -1;
 		}
 
-		.row > .col-1 {
-			width: 8.33333%;
-		}
+		.col-1 { flex: 0 0 8.33%; }
+		.col-2 { flex: 0 0 16.66%; }
+		.col-3 { flex: 0 0 25%; }
+		.col-4 { flex: 0 0 33.33%; }
+		.col-5 { flex: 0 0 41.66%; }
+		.col-6 { flex: 0 0 50%; }
+		.col-7 { flex: 0 0 58.33%; }
+		.col-8 { flex: 0 0 66.66%; }
+		.col-9 { flex: 0 0 75%; }
+		.col-10 { flex: 0 0 83.33%; }
+		.col-11 { flex: 0 0 91.66%; }
+		.col-12 { flex: 0 0 100%; }
 
-		.row > .off-1 {
-			margin-left: 8.33333%;
-		}
-
-		.row > .col-2 {
-			width: 16.66667%;
-		}
-
-		.row > .off-2 {
-			margin-left: 16.66667%;
-		}
-
-		.row > .col-3 {
-			width: 25%;
-		}
-
-		.row > .off-3 {
-			margin-left: 25%;
-		}
-
-		.row > .col-4 {
-			width: 33.33333%;
-		}
-
-		.row > .off-4 {
-			margin-left: 33.33333%;
-		}
-
-		.row > .col-5 {
-			width: 41.66667%;
-		}
-
-		.row > .off-5 {
-			margin-left: 41.66667%;
-		}
-
-		.row > .col-6 {
-			width: 50%;
-		}
-
-		.row > .off-6 {
-			margin-left: 50%;
-		}
-
-		.row > .col-7 {
-			width: 58.33333%;
-		}
-
-		.row > .off-7 {
-			margin-left: 58.33333%;
-		}
-
-		.row > .col-8 {
-			width: 66.66667%;
-		}
-
-		.row > .off-8 {
-			margin-left: 66.66667%;
-		}
-
-		.row > .col-9 {
-			width: 75%;
-		}
-
-		.row > .off-9 {
-			margin-left: 75%;
-		}
-
-		.row > .col-10 {
-			width: 83.33333%;
-		}
-
-		.row > .off-10 {
-			margin-left: 83.33333%;
-		}
-
-		.row > .col-11 {
-			width: 91.66667%;
-		}
-
-		.row > .off-11 {
-			margin-left: 91.66667%;
-		}
-
-		.row > .col-12 {
-			width: 100%;
-		}
-
-		.row > .off-12 {
-			margin-left: 100%;
-		}
+		.off-1 { margin-left: 8.33%; }
+		.off-2 { margin-left: 16.66%; }
+		.off-3 { margin-left: 25%; }
+		.off-4 { margin-left: 33.33%; }
+		.off-5 { margin-left: 41.66%; }
+		.off-6 { margin-left: 50%; }
+		.off-7 { margin-left: 58.33%; }
+		.off-8 { margin-left: 66.66%; }
+		.off-9 { margin-left: 75%; }
+		.off-10 { margin-left: 83.33%; }
+		.off-11 { margin-left: 91.66%; }
 
 		.row.gtr-0 {
 			margin-top: 0px;
