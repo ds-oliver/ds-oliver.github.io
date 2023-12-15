@@ -138,8 +138,9 @@ body.dark-theme a:focus {
 	z-index: 1000;
 	position: fixed;
 	/* Fixed at the right on the page */
+	top: 1em;
 	right: 1em; /* Align to the right side */
-	left: auto; /* Remove the left alignment if it's there */
+	/* left: auto; Remove the left alignment if it's there */
 }
 
 /* Improving form elements readability and usability */
