@@ -101,6 +101,72 @@ body {
 
 }
 
+body.light-theme {
+	background-color: var(--bg-color-light);
+	color: var(--text-color-light);
+}
+
+body.dark-theme {
+	background-color: var(--bg-color-dark);
+	color: var(--text-color-dark);
+}
+
+
+/* Link Styles for Light Theme */
+body.light-theme a {
+	color: #0056b3;
+	/* A more vivid blue for links */
+}
+
+body.light-theme a:hover,
+body.light-theme a:focus {
+	color: #ff6347;
+	/* A warm color on hover for better visibility */
+}
+
+/* Link Styles for Dark Theme */
+body.dark-theme a {
+	color: #4da6ff;
+	/* A soft blue for links */
+}
+
+body.dark-theme a:hover,
+body.dark-theme a:focus {
+	color: #ffa07a;
+	/* A soft coral for hover states */
+}
+
+/* Theme Toggle Button Enhancement */
+.theme-switcher {
+	background-color: #f0f0f0;
+	/* Light background for the toggle button */
+	color: #333;
+	/* Dark text for contrast */
+	border: 1px solid #ddd;
+	/* Border to make it stand out */
+	padding: 0.5em 1em;
+	/* Padding for better touch targets */
+	border-radius: 0.3em;
+	/* Rounded corners */
+	z-index: 1000;
+	position: fixed;
+	/* Fixed at the right on the page */
+	top: 1em;
+}
+
+/* Improving form elements readability and usability */
+input,
+select,
+textarea,
+button {
+	font-size: 1em;
+	padding: 0.75em;
+	border: 1px solid #ccc;
+	border-radius: 0.3em;
+	box-shadow: none;
+	/* Remove any box-shadow */
+}
+
 /* Box-sizing border-box for all elements */
 *, *:before, *:after {
 	box-sizing: border-box;
@@ -182,6 +248,89 @@ input, select, textarea {
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+	outline: 3px solid #0056b3;
+	outline-offset: 2px;
+}
+
+.skill-tag {
+	margin-bottom: 6px;
+	padding: 0;
+	border: 1px solid grey;
+	display: inline-block;
+	border-radius: 25px;
+	background: #ededed;
+}
+
+.project-image .image img {
+	max-width: 100%;
+	height: auto;
+}
+
+.project-description {
+	position: relative;
+}
+
+/* Main container adjustments for padding and max width */
+.container {
+	max-width: 100%;
+	/* Full width on smaller screens */
+	padding: 0 15px;
+	/* Padding on the sides */
+}
+
+
+/* Accessibility improvements for screen readers */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 3px dashed #2299dd;
+	/* High contrast outline for focused element */
+	outline-offset: 3px;
+	/* Distance of the outline from the element */
+}
+
+.content {
+	background-color: var(--bg-color);
+	/* Use the background color based on the theme */
+	color: var(--text-color);
+	/* Use the text color based on the theme */
+	padding: 1em;
+	/* Spacing within the content area */
+	border-radius: var(--border-radius);
+	/* Rounded corners */
+	box-shadow: 0 2px 5px var(--bg-color-faded-alt);
+	/* Shadow for depth, using a semi-transparent black for light theme and semi-transparent white for dark theme */
+	transition: var(--transition);
+	/* Smooth transition for theme change */
+}
+
+.content h1,
+.content h2,
+.content h3 {
+	color: var(--text-color-highlight);
+	/* For headers within content */
+	margin-top: 0.5em;
+	margin-bottom: 0.2em;
+}
+
+.content a {
+	color: var(--bg-color-highlight);
+	/* Links color */
+	text-decoration: none;
+	/* Removes underline */
+}
+
+.content a:hover {
+	color: var(--bg-color-accent);
+	/* Changes color on hover */
+	text-decoration: underline;
+	/* Adds underline on hover */
 }
 
 /* Basic */
@@ -1762,6 +1911,21 @@ br.clear {
 
 /* Image */
 
+	/* Images within the table */
+	.university-logo {
+		display: block;
+		margin: 0 auto;
+		/* Centers the image within the cell */
+		max-height: 150px;
+		/* Max height for larger screens, reduce if still too large */
+		max-width: 100%;
+		/* This will ensure the image is responsive and does not overflow its container */
+		height: auto;
+		/* Maintain aspect ratio */
+		width: auto;
+		/* Maintain aspect ratio */
+	}
+
 	.image {
 		display: inline-block;
 		border: 0;
@@ -1924,6 +2088,76 @@ br.clear {
 	}
 
 /* Table */
+
+
+/* Table layout for readability */
+.education-table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	/* Helps to avoid table from overflowing the container */
+}
+
+/* Table header for clear sectioning */
+.education-table thead th {
+	text-align: left;
+	background-color: #1a1a1a; /* Dark grey background for the header for distinction */
+	padding: 10px;
+	border-bottom: 1px solid #000000; /* Separator for header */
+}
+
+/* Table body for content */
+.education-table tbody td {
+	text-align: left;
+	padding: 10px;
+	vertical-align: top;
+	/* Centers the content vertically */
+	border-bottom: 1px solid #eee;
+	/* Light border for each row for separation */
+}
+
+/* Ensure table cells are centered vertically */
+.education-table td {
+	text-align: left;
+	vertical-align: top;
+	/* Aligns content of <td> in the middle vertically */
+	padding: 10px;
+	/* Provides spacing within the cells */
+}
+
+/* Responsive image for smaller devices */
+@media screen and (max-width: 768px) {
+
+	.container,
+	.button {
+		width: 100%;
+	}
+
+	body {
+		padding: var(--border-radius);
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-size: var(--font-size-large);
+	}
+}
+
+/* Link styling */
+.education-table a {
+	color: #0066cc;
+	/* Standard link color */
+	text-decoration: none;
+	/* No underline to keep it clean */
+	font-weight: bold;
+	/* Make links bold to stand out */
+}
+
+.education-table a:hover {
+	text-decoration: underline;
+	/* Underline on hover for interactivity */
+}
 
 	table {
 		width: 100%;
@@ -2658,88 +2892,7 @@ br.clear {
 
 	}
 
-
-/* Base Typography */
-html,
-body {
-	font-family: 'Source Sans Pro', sans-serif;
-	line-height: 1.6;
-	font-weight: 300;
-	color: #333;
-	/* Opt for a softer color for dark theme and a darker color for light theme */
-}
-
-body.light-theme {
-	background-color: var(--bg-color-light);
-	color: var(--text-color-light);
-}
-
-body.dark-theme {
-	background-color: var(--bg-color-dark);
-	color: var(--text-color-dark);
-}
-/* Base settings for improved readability */
-html,
-body {
-	font-family: 'Source Sans Pro', sans-serif;
-	line-height: 1.6;
-	font-weight: 400;
-	/* Slightly heavier weight for better legibility */
-}
-
-/* Link Styles for Light Theme */
-body.light-theme a {
-	color: #0056b3;
-	/* A more vivid blue for links */
-}
-
-body.light-theme a:hover,
-body.light-theme a:focus {
-	color: #ff6347;
-	/* A warm color on hover for better visibility */
-}
-
-/* Link Styles for Dark Theme */
-body.dark-theme a {
-	color: #4da6ff;
-	/* A soft blue for links */
-}
-
-body.dark-theme a:hover,
-body.dark-theme a:focus {
-	color: #ffa07a;
-	/* A soft coral for hover states */
-}
-
-/* Theme Toggle Button Enhancement */
-.theme-switcher {
-	background-color: #f0f0f0;
-	/* Light background for the toggle button */
-	color: #333;
-	/* Dark text for contrast */
-	border: 1px solid #ddd;
-	/* Border to make it stand out */
-	padding: 0.5em 1em;
-	/* Padding for better touch targets */
-	border-radius: 0.3em;
-	/* Rounded corners */
-	z-index: 1000;
-}
-
-/* Improving form elements readability and usability */
-input,
-select,
-textarea,
-button {
-	font-size: 1em;
-	padding: 0.75em;
-	border: 1px solid #ccc;
-	border-radius: 0.3em;
-	box-shadow: none;
-	/* Remove any box-shadow */
-}
-
-/* Tables for better reading */
+/* Tables for better reading
 table {
 	width: 100%;
 	border-collapse: collapse;
@@ -2750,176 +2903,11 @@ table td {
 	padding: 0.75em;
 	border: 1px solid #ddd;
 	/* Light border for contrast */
-}
+/* } */
 
 /* Responsive Images */
-img {
+/* img {
 	max-width: 100%;
 	height: auto;
-}
+} */
 
-/* Focus styles for accessibility */
-*:focus {
-	outline: 3px solid #0056b3;
-	outline-offset: 2px;
-}
-
-.skill-tag {
-	margin-bottom: 6px;
-	padding: 0;
-	border: 1px solid grey;
-	display: inline-block;
-	border-radius: 25px;
-	background: #ededed;
-}
-
-.project-image .image img {
-	max-width: 100%;
-	height: auto;
-}
-
-.project-description {
-	position: relative;
-}
-
-/* Main container adjustments for padding and max width */
-.container {
-	max-width: 100%;
-	/* Full width on smaller screens */
-	padding: 0 15px;
-	/* Padding on the sides */
-}
-
-/* Table layout for readability */
-.education-table {
-	width: 100%;
-	border-collapse: collapse;
-	table-layout: fixed;
-	/* Helps to avoid table from overflowing the container */
-}
-
-/* Table header for clear sectioning */
-.education-table thead th {
-	text-align: left;
-	background-color: #1a1a1a; /* Dark grey background for the header for distinction */
-	padding: 10px;
-	border-bottom: 1px solid #000000; /* Separator for header */
-}
-
-/* Table body for content */
-.education-table tbody td {
-	text-align: left;
-	padding: 10px;
-	vertical-align: top;
-	/* Centers the content vertically */
-	border-bottom: 1px solid #eee;
-	/* Light border for each row for separation */
-}
-
-/* Ensure table cells are centered vertically */
-.education-table td {
-	text-align: left;
-	vertical-align: top;
-	/* Aligns content of <td> in the middle vertically */
-	padding: 10px;
-	/* Provides spacing within the cells */
-}
-
-/* Images within the table */
-.university-logo {
-	display: block;
-	margin: 0 auto;
-	/* Centers the image within the cell */
-	max-height: 150px;
-	/* Max height for larger screens, reduce if still too large */
-	max-width: 100%;
-	/* This will ensure the image is responsive and does not overflow its container */
-	height: auto;
-	/* Maintain aspect ratio */
-	width: auto;
-	/* Maintain aspect ratio */
-}
-
-/* Responsive image for smaller devices */
-@media screen and (max-width: 768px) {
-
-	.container,
-	.button {
-		width: 100%;
-	}
-
-	body {
-		padding: var(--border-radius);
-	}
-
-	h1,
-	h2,
-	h3 {
-		font-size: var(--font-size-large);
-	}
-}
-
-/* Link styling */
-.education-table a {
-	color: #0066cc;
-	/* Standard link color */
-	text-decoration: none;
-	/* No underline to keep it clean */
-	font-weight: bold;
-	/* Make links bold to stand out */
-}
-
-.education-table a:hover {
-	text-decoration: underline;
-	/* Underline on hover for interactivity */
-}
-
-/* Accessibility improvements for screen readers */
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 3px dashed #2299dd;
-	/* High contrast outline for focused element */
-	outline-offset: 3px;
-	/* Distance of the outline from the element */
-}
-
-.content {
-	background-color: var(--bg-color);
-	/* Use the background color based on the theme */
-	color: var(--text-color);
-	/* Use the text color based on the theme */
-	padding: 1em;
-	/* Spacing within the content area */
-	border-radius: var(--border-radius);
-	/* Rounded corners */
-	box-shadow: 0 2px 5px var(--bg-color-faded-alt);
-	/* Shadow for depth, using a semi-transparent black for light theme and semi-transparent white for dark theme */
-	transition: var(--transition);
-	/* Smooth transition for theme change */
-}
-
-.content h1,
-.content h2,
-.content h3 {
-	color: var(--text-color-highlight);
-	/* For headers within content */
-	margin-top: 0.5em;
-	margin-bottom: 0.2em;
-}
-
-.content a {
-	color: var(--bg-color-highlight);
-	/* Links color */
-	text-decoration: none;
-	/* Removes underline */
-}
-
-.content a:hover {
-	color: var(--bg-color-accent);
-	/* Changes color on hover */
-	text-decoration: underline;
-	/* Adds underline on hover */
-}
