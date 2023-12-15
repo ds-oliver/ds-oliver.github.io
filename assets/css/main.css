@@ -338,6 +338,11 @@ header, footer {
 
 header > p, footer > p {
     margin: 1em 0 0 0;
+	color: var(--text-color-lighter);
+	background-color: var(--bg-color-lighter);
+	padding: 1em;
+	border-radius: var(--border-radius);
+	box-shadow: 0 2px 5px var(--bg-color-faded-alt);
 	
 }
 
@@ -384,8 +389,13 @@ body.light-theme {
 
 /* Light theme table styles */
 body.light-theme table {
+	width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    overflow-x: auto;
+    display: block;
 	border-color: var(--table-border-color-light-theme);
-	color: var(--text-color-light-theme);
+	border-bottom: 1px solid var(--table-border-color-light-theme);
 }
 
 body.light-theme table th {
@@ -432,7 +442,8 @@ body.dark-theme table {
     table-layout: fixed;
     overflow-x: auto;
     display: block;
-	border-color: var(--table-border-color-dark);
+	border-color: var(--table-border-color-dark-theme);
+	border-bottom: 1px solid var(--table-border-color-dark-theme);
 }
 
 /* Table header for clear sectioning */
