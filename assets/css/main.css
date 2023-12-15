@@ -138,7 +138,6 @@ body.dark-theme a:focus {
 	z-index: 1000;
 	position: fixed;
 	/* Fixed at the right on the page */
-	top: 1em;
 	right: 1em; /* Align to the right side */
 	left: auto; /* Remove the left alignment if it's there */
 }
@@ -202,7 +201,7 @@ ol, ul {
 blockquote, q {
   quotes: initial;
   padding-left: 1em;
-  border-left: 2px solid var(--text-color-faded);
+  border-left: 2px solid #ccc;
   margin-left: 0;
   font-style: italic;
 }
