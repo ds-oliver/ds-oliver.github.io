@@ -316,37 +316,47 @@
 		</ul>
 	</div>
 	
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
 <script>
 	// Theme switcher function
 	const toggleTheme = () => {
 		document.body.classList.toggle('dark-theme');
 		const themeIcon = document.getElementById('theme-toggle').firstElementChild;
-		themeIcon.classList.toggle('fa-moon');
-		themeIcon.classList.toggle('fa-sun');
-		localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+		if (document.body.classList.contains('dark-theme')) {
+			themeIcon.classList.remove('fa-moon');
+			themeIcon.classList.add('fa-sun');
+			localStorage.setItem('theme', 'dark');
+		} else {
+			themeIcon.classList.remove('fa-sun');
+			themeIcon.classList.add('fa-moon');
+			localStorage.setItem('theme', 'light');
+		}
 	};
 
 	// Initial theme check
 	window.addEventListener('DOMContentLoaded', () => {
-		if (localStorage.getItem('theme') === 'dark') {
+		const currentTheme = localStorage.getItem('theme');
+		if (currentTheme === 'dark') {
 			document.body.classList.add('dark-theme');
+			document.getElementById('theme-toggle').firstElementChild.classList.remove('fa-moon');
 			document.getElementById('theme-toggle').firstElementChild.classList.add('fa-sun');
 		} else {
+			document.getElementById('theme-toggle').firstElementChild.classList.remove('fa-sun');
 			document.getElementById('theme-toggle').firstElementChild.classList.add('fa-moon');
 		}
 	});
 
 	document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 </script>
+
 
 </body>
 
