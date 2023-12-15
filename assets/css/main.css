@@ -2463,7 +2463,7 @@ br.clear {
 				position: fixed;
 				top: 0;
 				width: 275px;
-				z-index: 10002;
+				z-index: 900;
 				width: 275px;
 				background: #222729 url("images/overlay.png");
 				box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.125);
@@ -2487,6 +2487,7 @@ br.clear {
 
 			#nav ul li a {
 				padding: 0.5em 1.25em 0.5em 1.25em;
+				z-index: 900;
 			}
 
 			#headerToggle {
@@ -2722,6 +2723,7 @@ body.dark-theme a:focus {
 	/* Padding for better touch targets */
 	border-radius: 0.3em;
 	/* Rounded corners */
+	z-index: 1000;
 }
 
 /* Improving form elements readability and usability */
