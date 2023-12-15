@@ -231,31 +231,28 @@
 
 /* Container */
 
-	.container {
-		margin: 0 auto;
-		max-width: 100%;
-		width: 1400px;
+.container {
+	margin: 0 auto;
+	max-width: 100%;
+	width: 100%; // Set to 100% for mobile-first
+	padding: 0 15px; // Padding for mobile devices
 
-		@include breakpoint('wide') {
-			width: 1200px;
-		}
-
-		@include breakpoint('normal') {
-			width: 960px;
-		}
-
-		@include breakpoint('narrow') {
-			width: 100%;
-		}
-
-		@include breakpoint('<=narrower') {
-			width: 100%;
-		}
-
-		@include breakpoint('<=mobile') {
-			width: 100%;
-		}
+	@include breakpoint('narrower') {
+		padding: 0 2em; // Adjust padding for tablet devices
+		width: 80%; // Adjust width for tablet devices
 	}
+
+	@include breakpoint('normal') {
+		width: 960px; // Adjust width for normal screens, typically small desktops or large tablets
+	}
+
+	@include breakpoint('wide') {
+		padding: 0 2em; // Maintain padding for wide screens
+		width: 1200px; // Adjust width for wide screens, typically larger desktops
+	}
+
+	// Note: If you have more specific breakpoints or customizations, you can add or adjust them as needed.
+}
 
 /* Row */
 
