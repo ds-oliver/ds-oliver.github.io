@@ -8,18 +8,17 @@
 */
 
 :root {
-	--text-color-light: #333;
-	--text-color-dark: #ddd;
-	--bg-color-light: #fff;
+	--text-color-light-theme: rgb(17, 29, 29);
+	--text-color-dark-theme: blanchedalmond;
+	--bg-color-light-theme: #fff;
 	--bg-color-lighter: #f0f0f0;
-	--bg-color-dark: #333;
+	--bg-color-dark-theme: darkslategray;
 	--bg-color-darker: #1a1a1a;
 	--bg-color: var(--bg-color-light);
 	--text-color: var(--text-color-light);
 	--bg-color-alt: var(--bg-color-dark);
 	--text-color-alt: var(--text-color-dark);
 
-	--border-color: #ddd;
 	--bg-color-highlight: #E27689;
 	--text-color-highlight: #fff;
 	--bg-color-highlight-alt: #E27689;
@@ -33,6 +32,21 @@
 	--bg-color-faded-alt: rgba(0, 0, 0, 0.5);
 	--text-color-faded-alt: rgba(255, 255, 255, 0.5);
 
+	--link-color-default: #0056b3;
+
+	--table-border-color-dark-theme: bisque;
+	--table-header-bg-color-dark-theme: #1a1a1a;
+	--table-odd-row-bg-color-dark-theme: hwb(252 4% 91%);
+	--table-even-row-bg-color-dark-theme: hwb(252 10% 91%);
+	--table-hover-row-bg-color-dark-theme: #ffa07a;
+	--table-link-color-dark-theme: #4da6ff;
+
+	--table-border-color-light-theme: #ccc;
+	--table-header-bg-color-light-theme: #f0f0f0;
+	--table-odd-row-bg-color-light-theme: #fff;
+	--table-even-row-bg-color-light-theme: blanchedalmond;
+	--table-hover-row-bg-color-light-theme: coral;
+	--table-link-color-light-theme: #0056b3;
 
 	--font-family: "Source Sans Pro", sans-serif;
 	--font-family-mono: "Source Code Pro", monospace;
@@ -82,89 +96,115 @@ body {
 	font-size: 1rem; /* using relative units for better responsiveness */
 	font-weight: var(--font-weight-normal);
 	line-height: 1.75em;
-	color: #888;
-	background-color: #1a1a1a; /* Default background color */
+	color: var(--text-color-dark-theme);
+	background-color: var(--bg-color-dark-theme); /* Default background color */
 	-webkit-text-size-adjust: none;
 
 }
 
+/* Body classes for theme switching */
 body.light-theme {
-	background-color: var(--bg-color-light);
-	color: var(--text-color-light);
+	background-color: var(--bg-color-light-theme);
+	color: var(--text-color-light-theme);
 }
+
+/* Light theme table styles */
+body.light-theme table {
+	border-color: var(--table-border-color-light-theme);
+	color: var(--text-color-light-theme);
+}
+
+body.light-theme table th {
+	border-color: var(--table-border-color-light-theme);
+	background-color: var(--table-header-bg-color-light-theme);
+	color: var(--text-color-light-theme);
+}
+
+body.light-theme table tr:nth-child(even) {
+	background-color: var(--table-even-row-bg-color-light-theme);
+}
+
+body.light-theme table tr:nth-child(odd) {
+	background-color: var(--table-odd-row-bg-color-light-theme);
+}
+
+body.light-theme table tr:hover {
+	background-color: var(--table-hover-row-bg-color-light-theme);
+}
+
+/* Link Styles for Light Theme */
+body.light-theme a {
+	color: var(--table-link-color-light);
+	/* A more vivid blue for links */
+}
+
+body.light-theme a:hover,
+body.light-theme a:focus {
+	color: var(--table-hover-row-bg-color-light);
+	/* A warm color on hover for better visibility */
+}
+
+/* Dark theme table styles */
 
 body.dark-theme {
 	background-color: var(--bg-color-dark);
 	color: var(--text-color-dark);
 }
 
-/* Light theme table styles */
-body.light-theme table {
-	border-color: #ccc;
-	color: #333;
-}
-
-body.light-theme table th {
-	background-color: #f0f0f0;
-	color: #333;
-}
-
-body.light-theme table tr:nth-child(even) {
-	background-color: #f0f0f0;
-}
-
-body.light-theme table tr:nth-child(odd) {
-	background-color: #fff;
-}
-
-body.light-theme table tr:hover {
-	background-color: #ddd;
-}
-
-/* Dark theme table styles */
+/* Table layout for readability */
 body.dark-theme table {
-	border-color: #444;
-	color: #ddd;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    overflow-x: auto;
+    display: block;
+	border-color: var(--table-border-color-dark);
 }
 
-body.dark-theme table th {
-	background-color: #333;
-	color: #ddd;
+/* Table header for clear sectioning */
+body.dark-theme table thead th {
+    text-align: left;
+    background-color: var(--table-header-bg-color-dark);
+    padding: 10px;
+    border-bottom: 1px solid var(--table-border-color-dark);
+}
+
+/* Table body for content */
+body.dark-theme table tbody td {
+    text-align: left;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid var(--table-border-color-dark);
+}
+
+/* Ensure table cells are centered vertically */
+body.dark-theme table td {
+    text-align: left;
+    vertical-align: top;
+    padding: 10px;
 }
 
 body.dark-theme table tr:nth-child(even) {
-	background-color: #333;
+	background-color: var(--table-even-row-bg-color-dark);
 }
 
 body.dark-theme table tr:nth-child(odd) {
-	background-color: #27262a;
+	background-color: var(--table-odd-row-bg-color-dark);
 }
 
 body.dark-theme table tr:hover {
-	background-color: #444;
-}
-
-/* Link Styles for Light Theme */
-body.light-theme a {
-	color: #0056b3;
-	/* A more vivid blue for links */
-}
-
-body.light-theme a:hover,
-body.light-theme a:focus {
-	color: #ff6347;
-	/* A warm color on hover for better visibility */
+	background-color: var(--table-hover-row-bg-color-dark);
 }
 
 /* Link Styles for Dark Theme */
 body.dark-theme a {
-	color: #4da6ff;
+	color: var(--table-link-color-dark);
 	/* A soft blue for links */
 }
 
 body.dark-theme a:hover,
 body.dark-theme a:focus {
-	color: #ffa07a;
+	color: var(--table-hover-row-bg-color-dark);
 	/* A soft coral for hover states */
 }
 
@@ -176,7 +216,7 @@ body.dark-theme a:focus {
 	/* Dark text for contrast */
 	border: 1px solid #ccc;
 	/* Border to make it stand out */
-	padding: 0.5em 1em;
+	padding: 0.5em 1em; 
 	/* Padding for better touch targets */
 	border-radius: 0.3em;
 	/* Rounded corners */
@@ -190,7 +230,7 @@ body.dark-theme a:focus {
 }
 
 .theme-toggle .fa-sun {
-  color: yellow; /* Color for light mode icon */
+  color: wheat; /* Color for light mode icon */
   display: block; /* Show sun by default */
 }
 
@@ -246,12 +286,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: bold; /* Make headings stand out */
-	color: #333; /* Darker color for contrast */
+	color: whitesmoke; /* Darker color for contrast */
 }
 
 /* Link styles */
 a {
-	color: #0056b3;
+	color: var(--default-link-color);
 	text-decoration: none; /* No underline by default */
 	transition: color .3 ease;
 }
@@ -2146,119 +2186,6 @@ br.clear {
 	form ::-moz-focus-inner {
 		border: 0;
 	}
-
-/* Table */
-
-/* Table layout for readability */
-.education-table {
-	width: 100%;
-	border-collapse: collapse;
-	table-layout: fixed;
-	/* Helps to avoid table from overflowing the container */
-	overflow-x: auto; /* Enables horizontal scrolling */
-	display: block; /* Tables are by default inline-block, changing this to block enables scrolling */
-}
-
-/* Table header for clear sectioning */
-.education-table thead th {
-	text-align: left;
-	background-color: #1a1a1a; /* Dark grey background for the header for distinction */
-	padding: 10px;
-	border-bottom: 1px solid var(--border-color); /* Separator for header */
-}
-
-/* Table body for content */
-.education-table tbody td {
-	text-align: left;
-	padding: 10px;
-	vertical-align: top;
-	/* Centers the content vertically */
-	border-bottom: 1px solid #eee;
-	/* Light border for each row for separation */
-}
-
-/* Ensure table cells are centered vertically */
-.education-table td {
-	text-align: left;
-	vertical-align: top;
-	/* Aligns content of <td> in the middle vertically */
-	padding: 10px;
-	/* Provides spacing within the cells */
-}
-
-/* .education-table body */
-.education-table tbody tr:nth-child(2n+2) {
-	background: #090626;
-	/* Light grey background for every other row for readability */
-}
-
-/* Responsive image for smaller devices */
-@media screen and (max-width: 768px) {
-
-	.container,
-	.button {
-		width: 100%;
-	}
-
-	body {
-		padding: var(--border-radius);
-	}
-
-	h1,
-	h2,
-	h3 {
-		font-size: var(--font-size-large);
-	}
-}
-
-/* Link styling */
-.education-table a {
-	color: #0066cc;
-	/* Standard link color */
-	text-decoration: none;
-	/* No underline to keep it clean */
-	font-weight: bold;
-	/* Make links bold to stand out */
-}
-
-.education-table a:hover {
-	text-decoration: underline;
-	/* Underline on hover for interactivity */
-}
-
-	table {
-		width: 100%;
-		text-align: left;
-	}
-
-		table tbody tr:nth-child(2n+2) {
-			background: #f4f4f4;
-		}
-
-		table td {
-				text-align: left;
-				background-color: #1a1a1a;
-				/* Dark grey background for the header for distinction */
-				padding: 10px;
-				border-bottom: 1px solid #000000;
-				/* Separator for header */
-			}
-
-		table th {
-			text-align: left;
-			padding: 10px;
-			color: #fff;
-			background: #222729 url("images/overlay.png");
-		}
-
-		table thead {
-			background: #444;
-			color: #fff;
-		}
-
-		table tfoot {
-			background: #eee;
-		}
 
 /* Button */
 
