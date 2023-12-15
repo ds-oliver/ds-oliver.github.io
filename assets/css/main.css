@@ -129,7 +129,7 @@ body.dark-theme a:focus {
 	/* Light background for the toggle button */
 	color: #333;
 	/* Dark text for contrast */
-	border: 1px solid var(--bg-color-lighter);
+	border: 1px solid #ccc;
 	/* Border to make it stand out */
 	padding: 0.5em 1em;
 	/* Padding for better touch targets */
@@ -213,7 +213,7 @@ table {
   margin-bottom: 1em;
 }
 th, td {
-  border: 1px solid var(--bg-color-lighter);
+  border: 1px solid #ccc;
   padding: 0.5em;
 }
 th {
