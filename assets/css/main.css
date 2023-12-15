@@ -25,8 +25,6 @@
 	--text-for-skill-tag-text-light-theme: var(text-color-dark-theme);
 	--border-for-skill-tag: rgb(251, 87, 87);
 
-
-
 	--bg-color-highlight: #E27689;
 	--text-color-highlight: #fff;
 	--bg-color-highlight-alt: #E27689;
@@ -211,14 +209,14 @@ input, select, textarea {
 
 /* Skill tag for dark theme */
 body.dark-theme .skill-tag {
-	border: var(--table-border-color-dark-theme);
+	border: var(--border-for-skill-tag);
 	background: var(--accent-for-skill-tag-bg-dark-theme);
 	color: var(--text-for-skill-tag-text-dark-theme);
 }
 
 /* Skill tag for light theme */
 body.light-theme .skill-tag {
-	border: var(--table-border-color-light-theme);
+	border: var(--border-for-skill-tag);
 	background: var(--accent-for-skill-tag-bg-light-theme);
 	color: var(--text-for-skill-tag-text-light-theme);
 }
