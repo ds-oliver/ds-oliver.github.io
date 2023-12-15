@@ -2422,6 +2422,24 @@ br.clear {
 						color: #e27689;
 					}
 
+/* Small screens */
+@media screen and (max-width: 768px) {
+  #nav {
+    width: 100%; /* Full width on small screens */
+    padding: 1em; /* Adjust padding as needed */
+    position: static; /* If you want it to flow with the document */
+  }
+}
+
+/* Larger screens */
+@media screen and (min-width: 769px) {
+  #nav {
+    width: 250px; /* Fixed width on large screens */
+    position: fixed; /* If you want it to stay in place while scrolling */
+    /* other styles as necessary */
+  }
+}
+
 /* Footer */
 
 	#footer {
