@@ -98,6 +98,51 @@ body.dark-theme {
 	color: var(--text-color-dark);
 }
 
+/* Light theme table styles */
+body.light-theme table {
+	border-color: #ccc;
+	color: #333;
+}
+
+body.light-theme table th {
+	background-color: #f0f0f0;
+	color: #333;
+}
+
+body.light-theme table tr:nth-child(even) {
+	background-color: #f0f0f0;
+}
+
+body.light-theme table tr:nth-child(odd) {
+	background-color: #fff;
+}
+
+body.light-theme table tr:hover {
+	background-color: #ddd;
+}
+
+/* Dark theme table styles */
+body.dark-theme table {
+	border-color: #444;
+	color: #ddd;
+}
+
+body.dark-theme table th {
+	background-color: #333;
+	color: #ddd;
+}
+
+body.dark-theme table tr:nth-child(even) {
+	background-color: #333;
+}
+
+body.dark-theme table tr:nth-child(odd) {
+	background-color: #27262a;
+}
+
+body.dark-theme table tr:hover {
+	background-color: #444;
+}
 
 /* Link Styles for Light Theme */
 body.light-theme a {
@@ -237,6 +282,7 @@ table {
   border-collapse: collapse;
   margin-bottom: 1em;
 }
+
 th, td {
   border: 1px solid #ccc;
   padding: 0.5em;
@@ -2103,7 +2149,6 @@ br.clear {
 
 /* Table */
 
-
 /* Table layout for readability */
 .education-table {
 	width: 100%;
@@ -2139,6 +2184,12 @@ br.clear {
 	/* Aligns content of <td> in the middle vertically */
 	padding: 10px;
 	/* Provides spacing within the cells */
+}
+
+/* .education-table body */
+.education-table tbody tr:nth-child(2n+2) {
+	background: #090626;
+	/* Light grey background for every other row for readability */
 }
 
 /* Responsive image for smaller devices */
