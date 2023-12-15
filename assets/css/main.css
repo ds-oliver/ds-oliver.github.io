@@ -2095,6 +2095,7 @@ br.clear {
 	background-color: #1a1a1a; /* Dark grey background for the header for distinction */
 	padding: 10px;
 	border-bottom: 1px solid var(--border-color); /* Separator for header */
+}
 
 /* Table body for content */
 .education-table tbody td {
@@ -2883,6 +2884,7 @@ br.clear {
 	}
 }
 
+
 /* Tables for better reading
 table {
 	width: 100%;
@@ -2901,4 +2903,3 @@ table td {
 	max-width: 100%;
 	height: auto;
 } */
-
