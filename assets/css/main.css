@@ -2544,9 +2544,14 @@ br.clear {
 			}
 
 /* Common styles for #main */
-#main {
+body.dark-theme #main {
     margin-left: 375px;
     /* Other common styles */
+}
+
+body.light-theme #main {
+	margin-left: 375px;
+	/* Other common styles */
 }
 
 /* Styles for dark theme */
@@ -2574,14 +2579,23 @@ body.light-theme #main > section {
 }
 
 /* Styles for specific sections */
-#main > section.one,
-#main > section.two,
-#main > section.three,
-#main > section.four {
+body.dark-theme #main > section.one,
+body.dark-theme #main > section.two,
+body.dark-theme #main > section.three,
+body.dark-theme #main > section.four {
 	background-size: cover;
 	background-position: center center;
 	background-color: #f5fafa;
 
+}
+
+body.light-theme #main > section.one,
+body.light-theme #main > section.two,
+body.light-theme #main > section.three,
+body.light-theme #main > section.four {
+	background-size: cover;
+	background-position: center center;
+	background-color: #f5fafa;
 }
 
 /* Wide */
