@@ -155,7 +155,6 @@ a:hover {
 	text-decoration: underline; /* Underline on hover for interactivity */
 }
 
-
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -353,6 +352,14 @@ header > p, footer > p {
 	
 }
 
+.skill-tag {
+    margin-bottom: 6px;
+    padding: 0;
+    border: var(--border-for-skill-tag);
+    display: inline-block;
+    border-radius: 25px;
+}
+
 /* Text Styles */
 strong, b {
     font-weight: var(--font-weight-bold);
@@ -424,16 +431,28 @@ body.light-theme a:focus {
 }
 
 body.light-theme h1, body.light-theme h2, body.light-theme h3, body.light-theme h4, body.light-theme h5, body.light-theme h6 {
-	color: var(--text-color-light-theme);
-	border-bottom: 1px solid var(--text-color-light-theme);
-	background-color: var(--bg-color-lighter);
+	color: inherit;
+	border-bottom: inherit;
+	background-color: inherit;
+}
+
+/* Skill tag for light theme */
+body.light-theme .skill-tag {
+    border: inherit;
+	border-bottom: inherit;
+	background-color: inherit;
 }
 
 /* Dark theme table styles */
-
 body.dark-theme {
 	background-color: var(--bg-color-dark);
 	color: var(--text-color-dark);
+}
+
+body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
+	color: var(--text-color-dark-theme);
+	border-bottom: 1px solid var(--text-color-dark-theme);
+	background-color: var(--bg-color-darker);
 }
 
 /* Table layout for readability */
@@ -494,6 +513,13 @@ body.dark-theme a:focus {
 	/* A soft coral for hover states */
 }
 
+/* Skill tag for dark theme */
+body.dark-theme .skill-tag {
+    border: var(--border-for-skill-tag);
+    background: var(--accent-for-skill-tag-bg-dark-theme);
+    color: var(--text-for-skill-tag-text-dark-theme);
+}
+
 /* Theme Toggle Button Enhancement */
 .theme-toggle {
 	background-color: #f0f0f0;
@@ -533,12 +559,6 @@ body.dark-theme .theme-toggle .fa-sun {
 /* When the light theme is active, hide the moon icon and show the sun icon */
 body.light-theme .theme-toggle .fa-moon {
   display: none;
-}
-
-body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
-	color: var(--text-color-dark-theme);
-	border-bottom: 1px solid var(--text-color-dark-theme);
-	background-color: var(--bg-color-darker);
 }
 
 /* Subscript and Superscript */
@@ -2522,30 +2542,6 @@ br.clear {
 			#main > section.four {
 				background-color: #e8edec;
 			}
-
-
-.skill-tag {
-	margin-bottom: 6px;
-	padding: 0;
-	border: var(--border-for-skill-tag);
-	display: inline-block;
-	border-radius: 25px;
-}
-
-/* Skill tag for dark theme */
-body.dark-theme .skill-tag {
-	border: var(--border-for-skill-tag);
-	background: var(--accent-for-skill-tag-bg-dark-theme);
-	color: var(--text-for-skill-tag-text-dark-theme);
-}
-
-/* Skill tag for light theme */
-body.light-theme .skill-tag {
-	border: var(--border-for-skill-tag);
-	background: var(--accent-for-skill-tag-bg-light-theme);
-	color: var(--text-for-skill-tag-text-light-theme);
-}
-
 
 /* Wide */
 
