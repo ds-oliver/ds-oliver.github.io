@@ -542,22 +542,15 @@ body.dark-theme .skill-tag {
 }
 
 /* Base styles for theme toggle icons */
-.theme-toggle .fa-sun, 
+.theme-toggle .fa-sun {
+  color: var(--text-color-light-theme); /* Default color for icons */
+  background-color: var(--bg-color-light-theme);
+  display: none; /* Hide both icons by default */
+}
 .theme-toggle .fa-moon {
   color: wheat; /* Default color for icons */
+  background-color: var(--bg-color-dark-theme);
   display: block; /* Hide both icons by default */
-}
-
-/* Specific styles for light theme */
-body.light-theme .theme-toggle .fa-sun {
-  color: wheat; /* Color for light mode icon */
-  display: block; /* Show sun icon in light theme */
-}
-
-/* Specific styles for dark theme */
-body.dark-theme .theme-toggle .fa-moon {
-  color: darkblue; /* Color for dark mode icon */
-  display: block; /* Show moon icon in dark theme */
 }
 
 /* Subscript and Superscript */
