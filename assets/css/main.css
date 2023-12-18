@@ -541,24 +541,23 @@ body.dark-theme .skill-tag {
 	cursor: pointer;	
 }
 
-.theme-toggle .fa-sun {
-  color: wheat; /* Color for light mode icon */
-  display: block; /* Show sun by default */
-}
-
+/* Base styles for theme toggle icons */
+.theme-toggle .fa-sun, 
 .theme-toggle .fa-moon {
+  color: wheat; /* Default color for icons */
+  display: none; /* Hide both icons by default */
+}
+
+/* Specific styles for light theme */
+body.light-theme .theme-toggle .fa-sun {
+  color: wheat; /* Color for light mode icon */
+  display: block; /* Show sun icon in light theme */
+}
+
+/* Specific styles for dark theme */
+body.dark-theme .theme-toggle .fa-moon {
   color: darkblue; /* Color for dark mode icon */
-  display: none; /* Hide moon by default */
-}
-
-/* When the dark theme is active, hide the sun icon and show the moon icon */
-body.dark-theme .theme-toggle .fa-sun {
-  display: none;
-}
-
-/* When the light theme is active, hide the moon icon and show the sun icon */
-body.light-theme .theme-toggle .fa-moon {
-  display: none;
+  display: block; /* Show moon icon in dark theme */
 }
 
 /* Subscript and Superscript */
