@@ -545,7 +545,7 @@ body.dark-theme .skill-tag {
 .theme-toggle .fa-sun, 
 .theme-toggle .fa-moon {
   color: wheat; /* Default color for icons */
-  display: none; /* Hide both icons by default */
+  display: block; /* Hide both icons by default */
 }
 
 /* Specific styles for light theme */
