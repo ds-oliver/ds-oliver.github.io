@@ -242,7 +242,7 @@ textarea:focus {
 .content {
 	background-color: var(--bg-color);
 	/* Use the background color based on the theme */
-	color: var(--text-color);
+	color: --text-color;
 	/* Use the text color based on the theme */
 	padding: 1em;
 	/* Spacing within the content area */
@@ -310,7 +310,8 @@ input, textarea, select {
 /* Heading Styles */
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold); /* Bold for headings */
-    color: var(--text-color); /* Consistent text color */
+	background-color: var(--bg-color-darker);
+    color: var(--text-color-dark-theme); /* Consistent text color */
     line-height: 1.5em;
 }
 
