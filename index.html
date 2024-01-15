@@ -326,37 +326,37 @@
 <script src="assets/js/main.js"></script>
 
 <script>
-	// Theme switcher function
-	const toggleTheme = () => {
-		document.body.classList.toggle('dark-theme');
-		const themeIcon = document.getElementById('theme-toggle').firstElementChild;
-		if (document.body.classList.contains('dark-theme')) {
-			themeIcon.classList.remove('fa-moon');
-			themeIcon.classList.add('fa-sun');
-			localStorage.setItem('theme', 'dark');
-		} else {
-			themeIcon.classList.remove('fa-sun');
-			themeIcon.classList.add('fa-moon');
-			localStorage.setItem('theme', 'light');
-		}
-	};
+    // Theme switcher function
+    const toggleTheme = () => {
+        document.body.classList.toggle('dark-theme');
+        const themeIcon = document.getElementById('theme-toggle').firstElementChild;
+        if (document.body.classList.contains('dark-theme')) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+            localStorage.setItem('theme', 'light');
+        }
+    };
 
-	// Initial theme check
-	window.addEventListener('DOMContentLoaded', () => {
-		const currentTheme = localStorage.getItem('theme');
-		if (currentTheme === 'dark') {
-			document.body.classList.add('dark-theme');
-			document.getElementById('theme-toggle').firstElementChild.classList.remove('fa-moon');
-			document.getElementById('theme-toggle').firstElementChild.classList.add('fa-sun');
-		} else {
-			document.getElementById('theme-toggle').firstElementChild.classList.remove('fa-sun');
-			document.getElementById('theme-toggle').firstElementChild.classList.add('fa-moon');
-		}
-	});
+    // Event listener for theme toggle button
+    document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 
-	document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+    // Initial theme check on page load
+    window.addEventListener('DOMContentLoaded', () => {
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            document.getElementById('theme-toggle').firstElementChild.classList.remove('fa-moon');
+            document.getElementById('theme-toggle').firstElementChild.classList.add('fa-sun');
+        } else {
+            document.getElementById('theme-toggle').firstElementChild.classList.remove('fa-sun');
+            document.getElementById('theme-toggle').firstElementChild.classList.add('fa-moon');
+        }
+    });
 </script>
-
 
 </body>
 
