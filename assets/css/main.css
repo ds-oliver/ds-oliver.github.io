@@ -14,11 +14,11 @@
 	--bg-color-lighter: #f0f0f0;
 	--bg-color-dark-theme: rgb(36, 51, 51);
 	--bg-color-darker: #1a1a1a;
-	--bg-color: var(--bg-color-light);
-	--text-color: var(--text-color-light);
-	--bg-color-alt: var(--bg-color-dark);
-	--text-color-alt: var(--text-color-dark);
-
+	--bg-color: var(--bg-color-light-theme);
+	--text-color: var(--text-color-light-theme);
+	--bg-color-alt: var(--bg-color-dark-theme);
+	--text-color-alt: var(--text-color-dark-theme);
+	
 	--accent-for-skill-tag-bg-dark-theme: var(--text-color-dark-theme);
 	--text-for-skill-tag-text-dark-theme: rgb(17, 29, 29);
 	--accent-for-skill-tag-bg-light-theme: rgb(36, 51, 51);
