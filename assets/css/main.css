@@ -2,38 +2,39 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
 
 /*
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Prologue by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 :root {
-	--text-color-light-theme: rgb(17, 29, 29);
-	--text-color-dark-theme: blanchedalmond;
-	--bg-color-light-theme: whitesmoke;
-	--bg-color-lighter: #f0f0f0;
-	--bg-color-dark-theme: rgb(36, 51, 51);
-	--bg-color-darker: #1a1a1a;
-	--bg-color: var(--bg-color-light-theme);
-	--text-color: var(--text-color-light-theme);
-	--bg-color-alt: var(--bg-color-dark-theme);
-	--text-color-alt: var(--text-color-dark-theme);
-	
-	--accent-for-skill-tag-bg-dark-theme: var(--text-color-dark-theme);
-	--text-for-skill-tag-text-dark-theme: rgb(17, 29, 29);
-	--accent-for-skill-tag-bg-light-theme: rgb(36, 51, 51);
-	--text-for-skill-tag-text-light-theme: var(--text-color-dark-theme);
-	--border-for-skill-tag: rgb(251, 87, 87);
+    --text-color-light-theme: rgb(17, 29, 29);
+    --text-color-dark-theme: blanchedalmond;
+    --bg-color-light-theme: whitesmoke;
+    --bg-color-lighter: #f0f0f0;
+    --bg-color-dark-theme: rgb(36, 51, 51);
+    --bg-color-darker: #1a1a1a;
+    --bg-color: var(--bg-color-light-theme);
+    --text-color: var(--text-color-light-theme);
+    --bg-color-alt: var(--bg-color-dark-theme);
+    --text-color-alt: var(--text-color-dark-theme);
+    
+    --accent-for-skill-tag-bg-dark-theme: var(--text-color-dark-theme);
+    --text-for-skill-tag-text-dark-theme: rgb(17, 29, 29);
+    --accent-for-skill-tag-bg-light-theme: rgb(36, 51, 51);
+    --text-for-skill-tag-text-light-theme: var(--text-color-dark-theme);
+    --border-for-skill-tag: rgb(251, 87, 87);
 
-	--bg-color-highlight: #E27689;
-	--text-color-highlight: #fff;
-	--bg-color-highlight-alt: #E27689;
-	--text-color-highlight-alt: #fff;
-	--bg-color-accent: #E27689;
-	--text-color-accent: #fff;
-	--bg-color-accent-alt: #E27689;
-	--text-color-accent-alt: #fff;
-	--bg-color-faded: rgba(255, 255, 255, 0.5);
+    --bg-color-highlight: #E27689;
+    --text-color-highlight: #fff;
+    --bg-color-highlight-alt: #E27689;
+    --text-color-highlight-alt: #fff;
+    --bg-color-accent: #E27689;
+    --text-color-accent: #fff;
+    --bg-color-accent-alt: #E27689;
+    --text-color-accent-alt: #fff;
+    --bg-color-faded: rgba(255, 255, 255, 0.5);
+
 	--text-color-faded: rgba(0, 0, 0, 0.5);
 	--bg-color-faded-alt: rgba(0, 0, 0, 0.5);
 	--text-color-faded-alt: rgba(255, 255, 255, 0.5);
@@ -92,20 +93,17 @@
 
 	--ms-zoom-min-width: 0;
 	--ms-zoom-max-width: 0;
-
-
 }
 
 /* Base styles */
 body {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 1rem; /* using relative units for better responsiveness */
-	font-weight: var(--font-weight-normal);
-	line-height: 1.75em;
-	color: var(--text-color-dark-theme);
-	background-color: var(--bg-color-dark-theme); /* Default background color */
-	-webkit-text-size-adjust: none;
-
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 1rem; / using relative units for better responsiveness /
+font-weight: var(--font-weight-normal);
+line-height: 1.75em;
+color: var(--text-color-dark-theme);
+background-color: var(--bg-color-dark-theme); / Default background color */
+-webkit-text-size-adjust: none;
 }
 
 /* Improving form elements readability and usability */
@@ -113,94 +111,97 @@ input,
 select,
 textarea,
 button {
-	font-size: 1em;
-	padding: 0.75em;
-	border: 1px solid #ccc;
-	border-radius: 0.3em;
-	box-shadow: none;
+font-size: 1em;
+padding: 0.75em;
+border: 1px solid #ccc;
+border-radius: 0.3em;
+box-shadow: none;
 	/* Remove any box-shadow */
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+box-shadow: 0 0 0 2px var(--link-color-default);
+	/* Add a box-shadow on focus */
 }
 
 /* Box-sizing border-box for all elements */
 *, *:before, *:after {
-	box-sizing: border-box;
+box-sizing: border-box;
 }
 
 /* Specific element styles */
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.75rem; }
-h3 { font-size: 1.5rem; }
+h1 { font-size: clamp(1.5rem, 5vw, 2rem); }
+h2 { font-size: clamp(1.25rem, 4vw, 1.75rem); }
+h3 { font-size: clamp(1rem, 3vw, 1.5rem); }
 h4 { font-size: 1.25rem; }
 h5 { font-size: 1rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: bold; /* Make headings stand out */
-	color: whitesmoke; /* Darker color for contrast */
+margin-top: 0.75em;
+margin-bottom: 0.75em;
+font-weight: bold;
+color: whitesmoke; 
 }
 
 /* Link styles */
 a {
-	color: var(--default-link-color);
-	text-decoration: none; /* No underline by default */
-	transition: color .3 ease;
+color: var(--default-link-color);
+text-decoration: none;
+transition: color .3s ease, text-decoration .3s ease;
 }
 
-a:hover {
-	text-decoration: underline; /* Underline on hover for interactivity */
+a:hover, a:focus {
+text-decoration: underline; /* Underline on hover for interactivity */
 }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;}
+display: block;
+}
 
 ol, ul {
-	list-style: none;
+list-style: none;
 }
 
 blockquote, q {
-  quotes: initial;
-  padding-left: 1em;
-  border-left: 2px solid #ccc;
-  margin-left: 0;
-  font-style: italic;
+quotes: initial;
+padding-left: 1em;
+border-left: 2px solid #ccc;
+margin-left: 0;
+font-style: italic;
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1em;
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 1em;
 }
 
 th, td {
-  border: 1px solid #ccc;
-  padding: 0.5em;
+border: 1px solid #ccc;
+padding: 0.5em;
 }
 th {
-  background-color: var(--bg-color-darker);
-  color: var(--text-color-light);
+background-color: var(--bg-color-darker);
+color: var(--text-color-light);
 }
 
 mark {
-	background-color: transparent;
-	color: inherit;
+background-color: transparent;
+color: inherit;
 }
 
 input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
+border: 0;
+padding: 0;
 }
 
 input, select, textarea {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
+-moz-appearance: none;
+-webkit-appearance: none;
+-ms-appearance: none;
+appearance: none;
 }
 
 /* Focus styles for accessibility */
