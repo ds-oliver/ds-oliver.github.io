@@ -2324,6 +2324,7 @@ button,
     padding: 0; /* No padding for these elements */
     text-align: center; /* Center-align the text */
     background: none; /* No background color */
+    color: var(--text-color-dark-theme);
 }
 
 #nav ul {
