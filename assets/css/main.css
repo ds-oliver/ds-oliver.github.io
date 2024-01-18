@@ -2308,8 +2308,8 @@ button,
 }
 
 #logo .image {
-    width: 100px; /* Desired width of the avatar image */
-    height: 75px; /* Desired height of the avatar image */
+    width: 150px; /* Desired width of the avatar image */
+    height: 100px; /* Desired height of the avatar image */
     margin-bottom: 1em; /* Space between image and the text */
 }
 
