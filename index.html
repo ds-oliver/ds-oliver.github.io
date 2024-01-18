@@ -244,6 +244,8 @@
     <ul class="copyright">
         <li>&copy; 2023 Hogan Marhoefer. All rights reserved.</li>
         <li>Design inspired by: <a href="http://html5up.net">HTML5 UP</a></li>
+        <!-- Timestamp Placeholder -->
+        <li>Last Updated: <span id="last-updated-date"></span></li>
     </ul>
 </footer>
 <!-- Scripts -->
@@ -282,6 +284,16 @@
             document.getElementById('theme-toggle').firstElementChild.classList.remove('fa-sun');
             document.getElementById('theme-toggle').firstElementChild.classList.add('fa-moon');
         }
+    });
+	// Update Timestamp
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const date = new Date();
+        const formattedDate = date.toLocaleDateString("en-US", {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        document.getElementById('last-updated-date').textContent = formattedDate;
     });
 </script>
 </body>
