@@ -2315,8 +2315,8 @@ button,
     left: 50%; /* Position to the half of the container's width */
     top: 0; /* Position to the very top of the header */
     transform: translateX(-50%); /* Shift the image to the left by half of its width to center it */
-    width: 100px; /* Set the width of the image */
-    height: 75px; /* Set the height of the image */
+    width: 150px; /* Set the width of the image */
+    height: 100px; /* Set the height of the image */
 }
 
 #logo .image img {
