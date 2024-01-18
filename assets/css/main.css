@@ -399,7 +399,7 @@ body.light-theme p {
 
 /* Paragraph styles for Dark Theme */
 body.dark-theme p {
-    color: var(--text-color-dark); /* Text color for dark theme */
+    color: var(--text-color-dark-theme); /* Text color for dark theme */
     /* Add other styles such as padding, margin, line-height as needed */
 }
 
