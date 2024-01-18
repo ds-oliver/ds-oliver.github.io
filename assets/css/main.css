@@ -2323,6 +2323,7 @@ button,
     margin: 0; /* Remove default margins */
     padding: 0; /* No padding for these elements */
     text-align: center; /* Center-align the text */
+    background: none; /* No background color */
 }
 
 #nav ul {
