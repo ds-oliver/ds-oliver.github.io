@@ -2304,6 +2304,7 @@ button,
     justify-content: center; /* Center content vertically in case of extra space */
     margin: 1em 1.25em; /* Adjust margin to create space around the logo */
     padding-top: 2em; /* Additional top padding to accommodate the image */
+    background: none; /* Transparent background */
 }
 
 #logo .image {
