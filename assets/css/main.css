@@ -93,7 +93,7 @@ body {
     font-size: 1rem;
     font-weight: var(--font-weight-normal);
     line-height: 1.75em;
-    color: var(--text-color-dark-theme);
+    color: var(--text-color-dark-theme, whitesmoke);
     background-color: var(--bg-color-dark-theme);
     -webkit-text-size-adjust: none;
 }
@@ -266,7 +266,7 @@ input, textarea, select {
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold);
     background-color: var(--bg-color-darker);
-    color: var(--text-color-dark-theme);
+    color: var(--text-color-dark-theme, whitesmoke);
     line-height: 1.5em;
 }
 
@@ -399,7 +399,7 @@ body.light-theme p {
 
 /* Paragraph styles for Dark Theme */
 body.dark-theme p {
-    color: var(--text-color-dark-theme); /* Text color for dark theme */
+    color: var(--text-color-dark-theme, whitesmoke); /* Text color for dark theme */
     /* Add other styles such as padding, margin, line-height as needed */
 }
 
