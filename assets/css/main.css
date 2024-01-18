@@ -391,6 +391,20 @@ body.light-theme .skill-tag {
     color: var(--text-for-skill-tag-text-light-theme);
 }
 
+/* Paragraph styles for Light Theme */
+body.light-theme p {
+    color: var(--text-color-light-theme); /* Text color for light theme */
+    background-color: var(--bg-color-lighter); /* Background color for light theme paragraphs */
+    /* Add other styles such as padding, margin, line-height as needed */
+}
+
+/* Paragraph styles for Dark Theme */
+body.dark-theme p {
+    color: var(--text-color-dark); /* Text color for dark theme */
+    background-color: var(--bg-color-darker); /* Background color for dark theme paragraphs */
+    /* Add other styles such as padding, margin, line-height as needed */
+}
+
 /* Dark theme table styles */
 body.dark-theme {
     background-color: var(--bg-color-dark);
@@ -483,7 +497,7 @@ body.dark-theme .skill-tag {
 /* Default icons visibility */
 .theme-toggle .fa-sun,
 .theme-toggle .fa-moon {
-    display: none;
+    display: inline;
 }
 
 /* Show sun icon in dark theme */
