@@ -334,11 +334,13 @@ a:hover {
     border-bottom-color: transparent;
 }
 
+/* Base styles for light theme */
 body.light-theme {
     background-color: var(--bg-color-light-theme);
     color: var(--text-color-light-theme);
 }
 
+/* Table styles for light theme */
 body.light-theme table {
     width: 100%;
     border-collapse: collapse;
@@ -346,11 +348,9 @@ body.light-theme table {
     overflow-x: auto;
     display: block;
     border-color: var(--table-border-color-light-theme);
-    border-bottom: 1px solid var(--table-border-color-light-theme);
 }
 
 body.light-theme table th {
-    border-color: var(--table-border-color-light-theme);
     background-color: var(--table-header-bg-color-light-theme);
     color: var(--text-color-light-theme);
 }
@@ -367,8 +367,7 @@ body.light-theme table tr:hover {
     background-color: var(--table-hover-row-bg-color-light-theme);
 }
 
-
-/* Link Styles for Light Theme */
+/* Link styles for light theme */
 body.light-theme a {
     color: var(--table-link-color-light);
 }
@@ -378,75 +377,36 @@ body.light-theme a:focus {
     color: var(--table-hover-row-bg-color-light);
 }
 
-body.light-theme h1, body.light-theme h2, body.light-theme h3, body.light-theme h4, body.light-theme h5, body.light-theme h6 {
+/* Headings for light theme */
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6 {
     color: var(--text-color-light-theme);
-    border-bottom: 1px solid var(--text-color-light-theme);
     background-color: var(--bg-color-lighter);
 }
 
-/* Skill tag for light theme */
+/* Skill tag styles for light theme */
 body.light-theme .skill-tag {
-    border: var(--border-for-skill-tag);
     background: var(--accent-for-skill-tag-bg-light-theme);
     color: var(--text-for-skill-tag-text-light-theme);
 }
 
-/* Paragraph styles for Light Theme */
-body.light-theme p {
-    color: var(--text-color-light-theme); /* Text color for light theme */
-    /* Add other styles such as padding, margin, line-height as needed */
-}
-
-/* Paragraph styles for Dark Theme */
-body.dark-theme p {
-    color: var(--text-color-dark-theme, whitesmoke); /* Text color for dark theme */
-    /* Add other styles such as padding, margin, line-height as needed */
-}
-
-/* Dark theme table styles */
+/* Base styles for dark theme */
 body.dark-theme {
     background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
-}
-
-body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
     color: var(--text-color-dark-theme);
-    border-bottom: 1px solid var(--text-color-dark-theme);
-    background-color: var(--bg-color-darker);
 }
 
-/* Table layout for readability */
+/* Table styles for dark theme */
 body.dark-theme table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    overflow-x: auto;
-    display: block;
     border-color: var(--table-border-color-dark-theme);
-    border-bottom: 1px solid var(--table-border-color-dark-theme);
 }
 
-/* Table header for clear sectioning */
-body.dark-theme table thead th {
-    text-align: left;
+body.dark-theme table th {
     background-color: var(--table-header-bg-color-dark);
-    padding: 10px;
-    border-bottom: 1px solid var(--table-border-color-dark);
-}
-
-/* Table body for content */
-body.dark-theme table tbody td {
-    text-align: left;
-    padding: 10px;
-    vertical-align: top;
-    border-bottom: 1px solid var(--table-border-color-dark);
-}
-
-/* Ensure table cells are centered vertically */
-body.dark-theme table td {
-    text-align: left;
-    vertical-align: top;
-    padding: 10px;
 }
 
 body.dark-theme table tr:nth-child(even) {
@@ -461,7 +421,7 @@ body.dark-theme table tr:hover {
     background-color: var(--table-hover-row-bg-color-dark);
 }
 
-/* Link Styles for Dark Theme */
+/* Link styles for dark theme */
 body.dark-theme a {
     color: var(--table-link-color-dark);
 }
@@ -471,14 +431,24 @@ body.dark-theme a:focus {
     color: var(--table-hover-row-bg-color-dark);
 }
 
-/* Skill tag for dark theme */
+/* Headings for dark theme */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+    color: var(--text-color-dark-theme);
+    background-color: var(--bg-color-darker);
+}
+
+/* Skill tag styles for dark theme */
 body.dark-theme .skill-tag {
-    border: var(--border-for-skill-tag);
     background: var(--accent-for-skill-tag-bg-dark-theme);
     color: var(--text-for-skill-tag-text-dark-theme);
 }
 
-/* Theme Toggle Button Enhancement */
+/* Theme toggle button styles */
 .theme-toggle {
     background-color: #f0f0f0;
     color: #333;
@@ -492,20 +462,27 @@ body.dark-theme .skill-tag {
     cursor: pointer;
 }
 
-/* Default icons visibility */
+/* Icon visibility for theme toggle */
 .theme-toggle .fa-sun,
 .theme-toggle .fa-moon {
-    display: inline;
+    display: none;
 }
 
-/* Show sun icon in dark theme */
-body.dark-theme .theme-toggle .fa-sun {
-    display: inline;
-}
-
-/* Show moon icon in light theme */
+body.dark-theme .theme-toggle .fa-sun,
 body.light-theme .theme-toggle .fa-moon {
     display: inline;
+}
+
+/* Adjusting light theme text color for visibility */
+body.light-theme #about.three h2,
+body.light-theme #about.three p {
+    color: var(--text-color-dark-theme); /* assuming this is a dark color for contrast */
+}
+
+/* Adjusting dark theme text color for visibility */
+body.dark-theme #about.three h2,
+body.dark-theme #about.three p {
+    color: var(--text-color-light-theme); /* assuming this is a light color for contrast */
 }
 
 /* Subscript and Superscript */
