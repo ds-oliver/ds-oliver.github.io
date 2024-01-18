@@ -2298,32 +2298,31 @@ button,
 			}
 
 #logo {
-    text-align: center; /* Center the text within the logo */
-    margin: 0; /* Adjust the margin as needed */
-    padding-top: 100px; /* Add padding to the top to push the text down */
+    display: flex; /* Use flexbox to layout child elements */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align the flex items */
+    justify-content: center; /* Center content vertically in case of extra space */
+    margin: 1em 1.25em; /* Adjust margin to create space around the logo */
+    padding-top: 2em; /* Additional top padding to accommodate the image */
+}
+
+#logo .image {
+    width: 100px; /* Desired width of the avatar image */
+    height: 75px; /* Desired height of the avatar image */
+    margin-bottom: 1em; /* Space between image and the text */
+}
+
+#logo .image img {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Keep the image's aspect ratio */
 }
 
 #logo h1,
 #logo p {
-    display: inline-block; /* Display inline-block to center the text */
-    margin: 0; /* Remove margin to align with the design */
-    padding: 0; /* Remove padding to align with the design */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* No padding for these elements */
+    text-align: center; /* Center-align the text */
 }
-
-#logo .image {
-    position: absolute; /* Absolute positioning to place the image */
-    left: 50%; /* Position to the half of the container's width */
-    top: 25%; /* Position to the very top of the header */
-    transform: translateX(-50%); /* Shift the image to the left by half of its width to center it */
-    width: 150px; /* Set the width of the image */
-    height: 100px; /* Set the height of the image */
-}
-
-#logo .image img {
-    width: 100%; /* Ensure the image fills the container */
-    height: auto; /* Maintain the aspect ratio */
-}
-
 
 #nav ul {
 	list-style: none;
