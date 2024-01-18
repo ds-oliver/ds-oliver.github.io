@@ -1979,15 +1979,14 @@ section, article {
         width: 100%;
     }
 
-    .image.avatar48 {
-        width: 48px;
-        height: 48px;
-        background: #f00;
+    .image.avatar60 {
+        width: 100px;  /* Width for the logo */
+        height: 75px;  /* Height for the logo */
     }
 
-        .image.avatar48 img {
-            width: 48px;
-            height: 48px;
+        .image.avatar60 img {
+            width: 100%; /* Ensures the image scales with its container */
+            height: auto; /* Maintains aspect ratio */
         }
 
     .image.fit {
