@@ -394,14 +394,12 @@ body.light-theme .skill-tag {
 /* Paragraph styles for Light Theme */
 body.light-theme p {
     color: var(--text-color-light-theme); /* Text color for light theme */
-    background-color: var(--bg-color-lighter); /* Background color for light theme paragraphs */
     /* Add other styles such as padding, margin, line-height as needed */
 }
 
 /* Paragraph styles for Dark Theme */
 body.dark-theme p {
     color: var(--text-color-dark); /* Text color for dark theme */
-    background-color: var(--bg-color-darker); /* Background color for dark theme paragraphs */
     /* Add other styles such as padding, margin, line-height as needed */
 }
 
