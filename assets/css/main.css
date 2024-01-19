@@ -476,6 +476,7 @@ body.light-theme #about.three, body.light-theme #about.three h2, body.light-them
 
 body.dark-theme #about.three, body.dark-theme #about.three h2, body.dark-theme #about.three p {
     color: blanchedalmond; /* Ensures text is visible on dark theme */
+	background-color: var(--bg-color-dark-theme);
 }
 
 /* Icon visibility for theme toggle */
