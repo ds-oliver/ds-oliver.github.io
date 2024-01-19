@@ -6,7 +6,7 @@
     --text-color-dark-theme: blanchedalmond;
     --bg-color-light-theme: whitesmoke;
     --bg-color-lighter: #f0f0f0;
-    --bg-color-dark-theme: rgb(36, 51, 51);
+    --bg-color-dark-theme: rgb(34,38,40);
     --bg-color-darker: #1a1a1a;
     --bg-color: var(--bg-color-light-theme);
     --text-color: var(--text-color-light-theme);
@@ -425,7 +425,7 @@ body.dark-theme table tr:nth-child(odd) {
 }
 
 body.dark-theme table tr:hover {
-    background-color: var(--table-hover-row-bg-color-dark-theme);
+    background-color: #0056b3;
 }
 
 /* Link styles for dark theme */
