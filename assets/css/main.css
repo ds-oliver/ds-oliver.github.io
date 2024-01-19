@@ -480,11 +480,12 @@ body.light-theme .theme-toggle .fa-moon {
     display: inline;
 }
 
-/* Adjusting light theme text color for visibility */
+body.light-theme #about.three,
 body.light-theme #about.three h2,
 body.light-theme #about.three p {
-    color: rgb(17, 29, 29); /* assuming this is a dark color for contrast */
+    color: var(--text-color-light-theme); /* Dark text for light background */
 }
+
 
 /* Adjusting dark theme text color for visibility */
 body.dark-theme #about.three h2,
