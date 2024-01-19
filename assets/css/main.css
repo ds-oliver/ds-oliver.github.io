@@ -458,7 +458,7 @@ body.dark-theme .skill-tag {
 /* Theme toggle button styles */
 .theme-toggle {
     background-color: #f0f0f0;
-    color: #333;
+    color: #100f1d;
     border: 1px solid #ccc;
     padding: 0.5em 1em;
     border-radius: 0.3em;
@@ -2135,7 +2135,7 @@ form ::-moz-focus-inner {
 }
 
 /* Button */
-input[type="button"],
+/* input[type="button"], */
 input[type="submit"],
 input[type="reset"],
 button,
