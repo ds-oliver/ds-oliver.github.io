@@ -374,12 +374,12 @@ body.light-theme table tr:hover {
 
 /* Link styles for light theme */
 body.light-theme a {
-    color: var(--table-link-color-light);
+    color: var(--table-link-color-light-theme);
 }
 
 body.light-theme a:hover,
 body.light-theme a:focus {
-    color: var(--table-hover-row-bg-color-light);
+    color: var(--table-hover-row-bg-color-light-theme);
 }
 
 /* Headings for light theme */
@@ -397,7 +397,7 @@ body.light-theme h6 {
 body.light-theme .skill-tag {
     background: var(--accent-for-skill-tag-bg-light-theme);
     color: var(--text-for-skill-tag-text-light-theme);
-	border: var(--border-for-skill-tag);
+    border: var(--border-for-skill-tag);
 }
 
 /* Base styles for dark theme */
@@ -412,29 +412,30 @@ body.dark-theme table {
 }
 
 body.dark-theme table th {
-    background-color: var(--table-header-bg-color-dark);
+    background-color: var(--table-header-bg-color-dark-theme);
+    color: var(--text-color-dark-theme);
 }
 
 body.dark-theme table tr:nth-child(even) {
-    background-color: var(--table-even-row-bg-color-dark);
+    background-color: var(--table-even-row-bg-color-dark-theme);
 }
 
 body.dark-theme table tr:nth-child(odd) {
-    background-color: var(--table-odd-row-bg-color-dark);
+    background-color: var(--table-odd-row-bg-color-dark-theme);
 }
 
 body.dark-theme table tr:hover {
-    background-color: var(--table-hover-row-bg-color-dark);
+    background-color: var(--table-hover-row-bg-color-dark-theme);
 }
 
 /* Link styles for dark theme */
 body.dark-theme a {
-    color: var(--table-link-color-dark);
+    color: var(--table-link-color-dark-theme);
 }
 
 body.dark-theme a:hover,
 body.dark-theme a:focus {
-    color: var(--table-hover-row-bg-color-dark);
+    color: var(--table-hover-row-bg-color-dark-theme);
 }
 
 /* Headings for dark theme */
@@ -451,7 +452,7 @@ body.dark-theme h6 {
 body.dark-theme .skill-tag {
     background: var(--accent-for-skill-tag-bg-dark-theme);
     color: var(--text-for-skill-tag-text-dark-theme);
-	border: var(--border-for-skill-tag);
+    border: var(--border-for-skill-tag);
 }
 
 /* Theme toggle button styles */
@@ -475,7 +476,7 @@ body.light-theme #about.three, body.light-theme #about.three h2, body.light-them
 
 body.dark-theme #about.three, body.dark-theme #about.three h2, body.dark-theme #about.three p {
     color: blanchedalmond; /* Ensures text is visible on dark theme */
-	/* background-color: var(--bg-color-dark-theme); */
+    /* background-color: var(--bg-color-dark-theme); */
 }
 
 /* Icon visibility for theme toggle */
