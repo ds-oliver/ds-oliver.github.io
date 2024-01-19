@@ -469,6 +469,15 @@ body.dark-theme .skill-tag {
     cursor: pointer;
 }
 
+/* Additional styles specific to themes and sections */
+body.light-theme #about.three, body.light-theme #about.three h2, body.light-theme #about.three p {
+    color: var(--text-color-light-theme); /* Ensures text is visible on light theme */
+}
+
+body.dark-theme #about.three, body.dark-theme #about.three h2, body.dark-theme #about.three p {
+    color: blanchedalmond; /* Ensures text is visible on dark theme */
+}
+
 /* Icon visibility for theme toggle */
 .theme-toggle .fa-sun,
 .theme-toggle .fa-moon {
@@ -478,19 +487,6 @@ body.dark-theme .skill-tag {
 body.dark-theme .theme-toggle .fa-sun,
 body.light-theme .theme-toggle .fa-moon {
     display: inline;
-}
-
-body.light-theme #about.three,
-body.light-theme #about.three h2,
-body.light-theme #about.three p {
-    color: var(--text-color-light-theme); /* Dark text for light background */
-}
-
-
-/* Adjusting dark theme text color for visibility */
-body.dark-theme #about.three h2,
-body.dark-theme #about.three p {
-    color: blanchedalmond; /* assuming this is a light color for contrast */
 }
 
 /* Subscript and Superscript */
