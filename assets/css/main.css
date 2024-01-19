@@ -403,7 +403,7 @@ body.light-theme .skill-tag {
 
 /* Base styles for dark theme */
 body.dark-theme {
-    background-color: var(--bg-color-dark);
+    background-color: var(--bg-color-dark-theme);
     color: var(--text-color-dark-theme);
 }
 
