@@ -167,7 +167,6 @@ th, td {
 }
 
 th {
-    background-color: var(--bg-color-darker);
     color: var(--text-color-light);
 }
 
@@ -266,7 +265,6 @@ input, textarea, select {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold);
-    background-color: var(--bg-color-darker);
     color: var(--text-color-dark-theme, whitesmoke);
     line-height: 1.5em;
 }
@@ -399,6 +397,7 @@ body.light-theme h6 {
 body.light-theme .skill-tag {
     background: var(--accent-for-skill-tag-bg-light-theme);
     color: var(--text-for-skill-tag-text-light-theme);
+	border: var(--border-for-skill-tag);
 }
 
 /* Base styles for dark theme */
@@ -446,13 +445,13 @@ body.dark-theme h4,
 body.dark-theme h5,
 body.dark-theme h6 {
     color: var(--text-color-dark-theme);
-    background-color: var(--bg-color-darker);
 }
 
 /* Skill tag styles for dark theme */
 body.dark-theme .skill-tag {
     background: var(--accent-for-skill-tag-bg-dark-theme);
     color: var(--text-for-skill-tag-text-dark-theme);
+	border: var(--border-for-skill-tag);
 }
 
 /* Theme toggle button styles */
