@@ -37,8 +37,8 @@
 
     --table-border-color-dark-theme: bisque;
     --table-header-bg-color-dark-theme: hsl(250,35%,7%);
-    --table-odd-row-bg-color-dark-theme: hwb(252 4% 91%);
-    --table-even-row-bg-color-dark-theme: hwb(252 10% 91%);
+    --table-odd-row-bg-color-dark-theme: hwb(252 10% 91%);
+    --table-even-row-bg-color-dark-theme:  hwb(252 4% 91%);
     --table-hover-row-bg-color-dark-theme: #ffa07a;
     --table-link-color-dark-theme: #4da6ff;
 
