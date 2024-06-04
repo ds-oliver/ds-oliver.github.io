@@ -1989,6 +1989,8 @@ section, article {
     .image.avatar60 {
         width: 100px;  /* Width for the logo */
         height: 75px;  /* Height for the logo */
+		border: 4px solid #fff; /* Add a light border */
+    	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     }
 
         .image.avatar60 img {
