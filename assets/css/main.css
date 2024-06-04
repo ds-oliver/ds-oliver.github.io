@@ -2022,6 +2022,23 @@ section, article {
             width: auto;
         }
 
+/* Additional CSS for avatar60 image */
+.image.avatar60 {
+    width: 100px;  /* Width for the logo */
+    height: 100px;  /* Height for the logo */
+    border-radius: 50%; /* Make the image circular */
+    overflow: hidden; /* Hide overflow to maintain circular shape */
+    border: 2px solid #ddd; /* Add a light border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: 0 auto 1em auto; /* Center the image and add some space below */
+}
+
+.image.avatar60 img {
+    width: 100%; /* Ensure the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
 /* List */
 ul {
     list-style: disc;
