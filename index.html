@@ -260,7 +260,7 @@
 // Theme switcher function
 const toggleTheme = () => {
     const body = document.body;
-    const themeIcon = document.getElementById('theme-toggle').firstElementChild;
+    const themeIcon = document.querySelector('#theme-toggle i');
 
     if (body.classList.contains('dark-theme')) {
         body.classList.remove('dark-theme');
@@ -280,10 +280,10 @@ const toggleTheme = () => {
 // Event listener for theme toggle button
 document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 
-// Event listener for setting initial theme on page load
+// Set initial theme on page load
 window.addEventListener('DOMContentLoaded', () => {
-    const currentTheme = localStorage.getItem('theme') || 'light'; // Default to light theme if not set
-    const themeIcon = document.getElementById('theme-toggle').firstElementChild;
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    const themeIcon = document.querySelector('#theme-toggle i');
 
     if (currentTheme === 'dark') {
         document.body.classList.add('dark-theme');
@@ -294,7 +294,7 @@ window.addEventListener('DOMContentLoaded', () => {
         themeIcon.classList.remove('fa-sun');
         themeIcon.classList.add('fa-moon');
     }
-    
+
     // Update last updated date
     const date = new Date();
     const formattedDate = date.toLocaleDateString("en-US", {
@@ -304,6 +304,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     document.getElementById('last-updated-date').textContent = formattedDate;
 });
+
 </script>
 </body>
 

@@ -455,7 +455,6 @@ body.dark-theme .skill-tag {
     border: var(--border-for-skill-tag);
 }
 
-/* Theme toggle button styles */
 .theme-toggle {
     background-color: #f0f0f0;
     color: #100f1d;
@@ -469,17 +468,6 @@ body.dark-theme .skill-tag {
     cursor: pointer;
 }
 
-/* Additional styles specific to themes and sections */
-body.light-theme #about.three, body.light-theme #about.three h2, body.light-theme #about.three p {
-    color: var(--text-color-light-theme); /* Ensures text is visible on light theme */
-}
-
-body.dark-theme #about.three, body.dark-theme #about.three h2, body.dark-theme #about.three p {
-    color: blanchedalmond; /* Ensures text is visible on dark theme */
-    background-color: var(--bg-color-dark-theme);
-}
-
-/* Icon visibility for theme toggle */
 .theme-toggle .fa-sun,
 .theme-toggle .fa-moon {
     display: none;
@@ -488,6 +476,17 @@ body.dark-theme #about.three, body.dark-theme #about.three h2, body.dark-theme #
 body.dark-theme .theme-toggle .fa-sun,
 body.light-theme .theme-toggle .fa-moon {
     display: inline;
+}
+
+
+/* Additional styles specific to themes and sections */
+body.light-theme #about.three, body.light-theme #about.three h2, body.light-theme #about.three p {
+    color: var(--text-color-light-theme); /* Ensures text is visible on light theme */
+}
+
+body.dark-theme #about.three, body.dark-theme #about.three h2, body.dark-theme #about.three p {
+    color: blanchedalmond; /* Ensures text is visible on dark theme */
+    background-color: var(--bg-color-dark-theme);
 }
 
 /* Subscript and Superscript */
