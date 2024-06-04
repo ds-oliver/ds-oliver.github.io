@@ -1923,35 +1923,39 @@ input, select, textarea {
 
 /* Table */
 
-	table {
-		width: 100%;
-		text-align: left;
-		font-size: 14pt
-	}
+table {
+    width: 100%;
+    text-align: left;
+    font-size: 14pt;
+    border-collapse: collapse;
+    margin: 2em 0; /* Add margin to separate from other content */
+}
 
-		table tbody tr:nth-child(2n+2) {
-			background: #f4f4f4;
-		}
+table tbody tr:nth-child(2n+2) {
+    background: #f4f4f4;
+}
 
-		table td {
-			padding: 0.3em 0.7em 0.3em 0.2em;
-		}
+table td, table th {
+    padding: 0.3em 0.7em 0.3em 0.2em;
+    border: 1px solid #ddd; /* Add border for better separation */
+}
 
-		table th {
-			text-align: left;
-			padding: 0.5em 0.2em 0.5em 0.2em;
-			color: #fff;
-			background: #222729
-		}
+table th {
+    text-align: left;
+    padding: 0.5em 0.2em 0.5em 0.2em;
+    color: #fff;
+    background: #222729;
+}
 
-		table thead {
-			background: #444;
-			color: #fff;
-		}
+table thead {
+    background: #444;
+    color: #fff;
+}
 
-		table tfoot {
-			background: #eee;
-		}
+table tfoot {
+    background: #eee;
+    color: #000; /* Ensure text color contrasts with background */
+}
 
 /* Button */
 
