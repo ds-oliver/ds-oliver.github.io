@@ -2024,6 +2024,16 @@ section, article {
             width: auto;
         }
 
+/* Additional CSS for avatar60 image */
+.image.avatar60 {
+    border: 4px solid #fff; /* Add a light border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: 0 auto 1em auto; /* Center the image and add some space below */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* List */
 ul {
