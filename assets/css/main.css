@@ -1813,7 +1813,7 @@ input, select, textarea {
 .university-logo {
     display: block;
     margin: 0 auto;
-    max-height: 100px; /* Set a max height for the images */
+    max-height: 80px; /* Set a max height for the images */
     max-width: 100%;   /* Ensure images do not exceed the cell width */
     height: auto;      /* Maintain aspect ratio */
     width: auto;       /* Maintain aspect ratio */
