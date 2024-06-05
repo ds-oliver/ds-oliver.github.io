@@ -1809,18 +1809,14 @@ input, select, textarea {
 			}
 
 /* Images within the table */
+/* Logo Images within the table */
 .university-logo {
     display: block;
     margin: 0 auto;
-    /* Centers the image within the cell */
-    max-height: 150px;
-    /* Max height for larger screens, reduce if still too large */
-    max-width: 100%;
-    /* This will ensure the image is responsive and does not overflow its container */
-    height: auto;
-    /* Maintain aspect ratio */
-    width: auto;
-    /* Maintain aspect ratio */
+    max-height: 100px; /* Set a max height for the images */
+    max-width: 100%;   /* Ensure images do not exceed the cell width */
+    height: auto;      /* Maintain aspect ratio */
+    width: auto;       /* Maintain aspect ratio */
 }
 
 /* List */
