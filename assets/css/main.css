@@ -1978,6 +1978,53 @@ table img {
     width: auto;       /* Maintain aspect ratio */
 }
 
+/* Updated Table Styles */
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+    font-size: 1rem; /* Adjust font size */
+}
+
+.education-table thead {
+    background: #222;
+    color: #fff;
+}
+
+.education-table th,
+.education-table td {
+    padding: 0.75em;
+    border: 1px solid #ddd;
+}
+
+.education-table th {
+    text-align: left;
+    font-weight: bold;
+    background-color: #444; /* Darker header background */
+    color: #fff;
+}
+
+.education-table tbody tr:nth-child(even) {
+    background: #f9f9f9; /* Lighter background for even rows */
+}
+
+.education-table tbody tr:nth-child(odd) {
+    background: #fff;
+}
+
+.education-table td a {
+    color: #e27689; /* Link color */
+    text-decoration: none;
+}
+
+.education-table td a:hover {
+    text-decoration: underline;
+}
+
+.education-table .university-logo {
+    max-height: 60px; /* Adjust logo height */
+    width: auto;
+}
 
 
 /* Button */
