@@ -1,2 +1,14 @@
 title: ds-oliver
 theme: minima
+
+description: "A portfolio showcasing my data science and Python projects."
+author:
+  name: "Oliver"
+  email: "hmarhoefer@gmail.com"
+  github_username: "ds-oliver"
+
+# This helps Jekyll generate RSS feeds, sitemaps, etc.
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
