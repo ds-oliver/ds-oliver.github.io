@@ -41,6 +41,11 @@ seo:
   og:
     image: "/assets/images/site-logo.png"
     type: "website"
+  json_ld:
+    organization:
+      name: "ds-oliver"
+      url: "https://ds-oliver.github.io"
+      logo: "https://ds-oliver.github.io/assets/images/site-logo.png"
 
 markdown: kramdown
 kramdown:
@@ -95,3 +100,6 @@ algolia:
   application_id: "your-application-id"
   index_name: "your-index-name"
   search_only_api_key: "your-search-only-api-key"
+
+paginate: 5
+paginate_path: "/blog/page:num/"
