@@ -34,3 +34,19 @@ seo:
 markdown: kramdown
 sass:
   style: compressed
+
+# Custom configuration
+custom_css:
+  - "assets/css/custom.css"
+
+# Custom JavaScript
+custom_js:
+  - "assets/js/custom.js"
+
+# Custom SASS
+custom_sass:
+  - "assets/sass/custom.scss"
+
+# Custom SASS variables
+custom_sass_variables:
+  - "assets/sass/variables.scss"
