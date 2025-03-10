@@ -2,7 +2,7 @@
 title: ds-oliver
 description: "A comprehensive portfolio showcasing data science, machine learning, and Python development projects with a focus on real-world applications."
 theme: minima
-remote_theme: "mmistakes/minimal-mistakes@latest"
+# remote_theme: "mmistakes/minimal-mistakes@latest"
 
 author:
   name: "Hogan"
