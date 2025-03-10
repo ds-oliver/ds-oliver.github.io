@@ -1,52 +1,109 @@
 # _config.yml
 title: ds-oliver
-description: "A portfolio showcasing my data science and Python projects."
+description: "A comprehensive portfolio showcasing data science, machine learning, and Python development projects with a focus on real-world applications."
 theme: minima
-# Optionally, you can override the default Minima theme by using a remote theme:
-# remote_theme: "mmistakes/minimal-mistakes@latest"
+# Use minimal-mistakes theme for enhanced features and customization
+remote_theme: "mmistakes/minimal-mistakes@latest"
 
+# Site author information
 author:
   name: "Hogan"
   email: "hmarhoefer@gmail.com"
   github_username: "ds-oliver"
   twitter_username: "yourTwitterHandle"
+  bio: "Data Scientist & Python Developer"
+  location: "Your Location"
+  linkedin_username: "your-linkedin"
+  stackoverflow_username: "your-stackoverflow"
 
+# Plugin configurations
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-assets   # For asset management (e.g., SASS, images, etc.)
+  - jekyll-assets
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-gist
 
-# Configure header navigation (Minima supports header_pages)
+# Navigation configuration
 header_pages:
   - about.md
   - projects.md
+  - blog.md
   - contact.md
+  - resume.md
 
-# SEO and social tags (jekyll-seo-tag uses these)
+# SEO and social media optimization
 seo:
   type: "website"
   twitter:
     card: "summary_large_image"
     site: "@yourTwitterHandle"
+    creator: "@yourTwitterHandle"
+  facebook:
+    app_id: "your-fb-app-id"
+  og:
+    image: "/assets/images/site-logo.png"
+    type: "website"
 
-# Optional: Set your preferred Markdown engine and SASS settings
+# Content settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  
+# Asset optimization
 sass:
   style: compressed
+  sourcemap: development
+  
+# Performance optimization
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
 
-# Custom configuration
+# Custom asset configurations
 custom_css:
   - "assets/css/custom.css"
+  - "assets/css/animations.css"
+  - "assets/css/responsive.css"
 
-# Custom JavaScript
 custom_js:
   - "assets/js/custom.js"
+  - "assets/js/analytics.js"
+  - "assets/js/interactions.js"
 
-# Custom SASS
 custom_sass:
   - "assets/sass/custom.scss"
+  - "assets/sass/components/_buttons.scss"
+  - "assets/sass/components/_cards.scss"
+  - "assets/sass/layouts/_grid.scss"
 
-# Custom SASS variables
 custom_sass_variables:
   - "assets/sass/variables.scss"
+  - "assets/sass/mixins.scss"
+  - "assets/sass/functions.scss"
+
+# Analytics and tracking
+google_analytics: "UA-XXXXXXXX-X"
+google_tag_manager: "GTM-XXXXXXX"
+
+# Comments system
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "your-disqus-shortname"
+
+# Site search
+search: true
+search_provider: "algolia"
+algolia:
+  application_id: "your-application-id"
+  index_name: "your-index-name"
+  search_only_api_key: "your-search-only-api-key"
