@@ -1,0 +1,41 @@
+##############################################
+# 1. _layouts/default.html
+##############################################
+cat << 'EOF' > _layouts/default.html
+---
+layout: nil
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {% include head.html %}
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- Minimal Mistakes uses navigation differently, but as an example: -->
+        <ul>
+          {% for page in site.header_pages %}
+          <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer>
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    </footer>
+
+    <!-- Example JS includes -->
+    <script src="/assets/js/analytics.js"></script>
+    <script src="/assets/js/custom.js"></script>
+    <script src="/assets/js/interactions.js"></script>
+  </body>
+</html>
