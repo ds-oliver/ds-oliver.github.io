@@ -1,17 +1,10 @@
 ---
 layout: page
-title: "About Me"
+title: "About"
 permalink: /about/
 ---
+# About Me
 
-![Profile Image](/assets/images/profile.jpg){: class="profile-photo" }
+I'm Hogan, a passionate data scientist and Python developer focused on creating real-world solutions through data analysis, machine learning, and innovative coding.
 
-Hi, I'm Hogan – a data scientist passionate about turning data into insights.  
-I specialize in Python, machine learning, and data visualization.
-
-### Skills
-- **Python** – Data processing, automation, and scripting.
-- **Machine Learning** – Model building, evaluation, and deployment.
-- **Data Visualization** – Interactive charts with Plotly and Altair.
-
-Find me on [GitHub](https://github.com/ds-oliver) and [LinkedIn](https://linkedin.com/in/yourprofile).
+Learn more about my [projects](./projects.md) or read my [blog](./blog.md).

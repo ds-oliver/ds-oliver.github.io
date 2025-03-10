@@ -1,0 +1,23 @@
+<!-- _includes/search.html -->
+<div id="search-container">
+    <input type="text" id="search-input" placeholder="Search...">
+    <ul id="search-results"></ul>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.js"></script>
+  <script>
+    const client = algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.search_only_api_key }}');
+    const index = client.initIndex('{{ site.algolia.index_name }}');
+  
+    document.getElementById('search-input').addEventListener('input', function(e) {
+      index.search(e.target.value).then(({ hits }) => {
+        const results = document.getElementById('search-results');
+        results.innerHTML = '';
+        hits.forEach(hit => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="${hit.url}">${hit.title}</a>`;
+          results.appendChild(li);
+        });
+      });
+    });
+  </script>
+  

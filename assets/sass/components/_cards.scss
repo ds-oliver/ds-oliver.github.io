@@ -1,0 +1,9 @@
+// assets/sass/components/_cards.scss
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: pxToRem(20);
+    margin-bottom: pxToRem(20);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

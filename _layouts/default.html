@@ -1,7 +1,3 @@
-##############################################
-# 1. _layouts/default.html
-##############################################
-cat << 'EOF' > _layouts/default.html
 ---
 layout: nil
 ---
@@ -16,13 +12,17 @@ layout: nil
   <body>
     <header>
       <nav>
-        <!-- Minimal Mistakes uses navigation differently, but as an example: -->
         <ul>
           {% for page in site.header_pages %}
-          <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+            {% assign my_page = site.pages | where:"path", page | first %}
+            {% if my_page %}
+              <li><a href="{{ my_page.url | relative_url }}">{{ my_page.title }}</a></li>
+            {% endif %}
           {% endfor %}
         </ul>
       </nav>
+      <!-- Optional: Insert a dark/light mode toggle here -->
+      <button id="toggle-mode">Toggle Dark/Light Mode</button>
     </header>
 
     <main>
@@ -30,10 +30,9 @@ layout: nil
     </main>
 
     <footer>
-      <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+      <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
     </footer>
 
-    <!-- Example JS includes -->
     <script src="/assets/js/analytics.js"></script>
     <script src="/assets/js/custom.js"></script>
     <script src="/assets/js/interactions.js"></script>

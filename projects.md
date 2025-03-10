@@ -3,17 +3,14 @@ layout: page
 title: "Projects"
 permalink: /projects/
 ---
-
 # Projects
 
-Below are some of my data science projects:
+Here are a few of my projects:
 
 - **Project A:**  
-  A machine learning model to predict stock prices.  
-  [GitHub Repo](https://github.com/ds-oliver/project-a) | [Live Demo](https://colab.research.google.com/...)
+  A machine learning project that predicts stock prices.  
+  [GitHub Repo](https://github.com/ds-oliver/projectA) | [Live Demo](https://colab.research.google.com/...)
 
 - **Project B:**  
-  Interactive data visualization with Plotly.  
-  [GitHub Repo](https://github.com/ds-oliver/project-b) | [Live Demo](https://nbviewer.org/...)
-  
-<!-- Add more projects as needed -->
+  Interactive data visualizations built with Plotly.  
+  [GitHub Repo](https://github.com/ds-oliver/projectB)

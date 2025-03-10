@@ -2,10 +2,8 @@
 title: ds-oliver
 description: "A comprehensive portfolio showcasing data science, machine learning, and Python development projects with a focus on real-world applications."
 theme: minima
-# Use minimal-mistakes theme for enhanced features and customization
 remote_theme: "mmistakes/minimal-mistakes@latest"
 
-# Site author information
 author:
   name: "Hogan"
   email: "hmarhoefer@gmail.com"
@@ -16,7 +14,6 @@ author:
   linkedin_username: "your-linkedin"
   stackoverflow_username: "your-stackoverflow"
 
-# Plugin configurations
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -26,7 +23,6 @@ plugins:
   - jekyll-paginate
   - jekyll-gist
 
-# Navigation configuration
 header_pages:
   - about.md
   - projects.md
@@ -34,7 +30,6 @@ header_pages:
   - contact.md
   - resume.md
 
-# SEO and social media optimization
 seo:
   type: "website"
   twitter:
@@ -47,18 +42,15 @@ seo:
     image: "/assets/images/site-logo.png"
     type: "website"
 
-# Content settings
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-  
-# Asset optimization
+
 sass:
   style: compressed
   sourcemap: development
-  
-# Performance optimization
+
 compress_html:
   clippings: all
   comments: all
@@ -68,7 +60,6 @@ compress_html:
   ignore:
     envs: []
 
-# Custom asset configurations
 custom_css:
   - "assets/css/custom.css"
   - "assets/css/animations.css"
@@ -83,24 +74,21 @@ custom_sass:
   - "assets/sass/custom.scss"
   - "assets/sass/components/_buttons.scss"
   - "assets/sass/components/_cards.scss"
-  - "assets/sass/layouts/_grid.scss"
+  - "assets/sass/components/_grid.scss"
 
 custom_sass_variables:
   - "assets/sass/variables.scss"
   - "assets/sass/mixins.scss"
   - "assets/sass/functions.scss"
 
-# Analytics and tracking
 google_analytics: "UA-XXXXXXXX-X"
 google_tag_manager: "GTM-XXXXXXX"
 
-# Comments system
 comments:
   provider: "disqus"
   disqus:
     shortname: "your-disqus-shortname"
 
-# Site search
 search: true
 search_provider: "algolia"
 algolia:

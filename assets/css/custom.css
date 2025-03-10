@@ -1,0 +1,23 @@
+/* assets/css/custom.css */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  header, footer {
+    background-color: #f8f8f8;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #3498db;
+  }
+  
