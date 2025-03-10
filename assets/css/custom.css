@@ -1,23 +1,167 @@
-/* assets/css/custom.css */
+@import "_variables";
+@import "_mixins";
+@import "_functions";
+/* // Optionally import component partials if you want them consolidated:
+// @import "components/_buttons";
+// @import "components/_cards";
+// @import "components/_grid"; */
+
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styles */
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #ffffff;
-    color: #333333;
-  }
-  
-  header, footer {
-    background-color: #f8f8f8;
+  font-family: $font-stack;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: $secondary-color;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: darken($primary-color, 10%);
+}
+
+/* Header Styles */
+header {
+  background: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Main Content */
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Footer */
+footer {
+  background: #f8f8f8;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Buttons */
+button, .btn {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+/* Cards */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
     padding: 1rem;
   }
   
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
   }
   
-  a {
-    text-decoration: none;
-    color: #3498db;
+  main {
+    padding: 0 0.5rem;
   }
-  
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode a {
+  color: lighten($primary-color, 20%);
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
