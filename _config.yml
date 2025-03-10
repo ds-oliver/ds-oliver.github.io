@@ -3,7 +3,7 @@ theme: minima
 
 description: "A portfolio showcasing my data science and Python projects."
 author:
-  name: "Oliver"
+  name: "Hogan"
   email: "hmarhoefer@gmail.com"
   github_username: "ds-oliver"
 
@@ -12,3 +12,9 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# This tells Minima which pages to link in the site header
+header_pages:
+  - about.md
+  - projects.md
+  - contact.md
