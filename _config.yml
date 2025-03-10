@@ -1,21 +1,36 @@
+# _config.yml
 title: ds-oliver
-theme: minima
-
 description: "A portfolio showcasing my data science and Python projects."
+theme: minima
+# Optionally, you can override the default Minima theme by using a remote theme:
+# remote_theme: "mmistakes/minimal-mistakes@latest"
 
 author:
   name: "Hogan"
   email: "hmarhoefer@gmail.com"
   github_username: "ds-oliver"
+  twitter_username: "yourTwitterHandle"
 
-# Jekyll plugins for RSS feed, SEO tags, and sitemap
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-assets   # For asset management (e.g., SASS, images, etc.)
 
-# Pages to link in Minima’s top navigation
+# Configure header navigation (Minima supports header_pages)
 header_pages:
   - about.md
   - projects.md
   - contact.md
+
+# SEO and social tags (jekyll-seo-tag uses these)
+seo:
+  type: "website"
+  twitter:
+    card: "summary_large_image"
+    site: "@yourTwitterHandle"
+
+# Optional: Set your preferred Markdown engine and SASS settings
+markdown: kramdown
+sass:
+  style: compressed
