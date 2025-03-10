@@ -2,18 +2,19 @@ title: ds-oliver
 theme: minima
 
 description: "A portfolio showcasing my data science and Python projects."
+
 author:
   name: "Hogan"
   email: "hmarhoefer@gmail.com"
   github_username: "ds-oliver"
 
-# This helps Jekyll generate RSS feeds, sitemaps, etc.
+# Jekyll plugins for RSS feed, SEO tags, and sitemap
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# This tells Minima which pages to link in the site header
+# Pages to link in Minima’s top navigation
 header_pages:
   - about.md
   - projects.md
