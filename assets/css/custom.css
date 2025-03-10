@@ -1,6 +1,6 @@
-@import "_variables";
-@import "_mixins";
-@import "_functions";
+@import "variables";
+@import "mixins";
+@import "functions";
 /* // Optionally import component partials if you want them consolidated:
 // @import "components/_buttons";
 // @import "components/_cards";
