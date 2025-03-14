@@ -3,7 +3,8 @@ layout: page
 title: "Contact"
 permalink: /contact/
 ---
-# Contact
+
+# Contact Me
 
 I'm always excited to connect! You can reach me at:
 

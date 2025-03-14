@@ -3,9 +3,10 @@ layout: page
 title: "Projects"
 permalink: /projects/
 ---
+
 # Projects
 
-Here are a few of my projects:
+Here are some of my key projects:
 
 - **Project A:**  
   A machine learning project that predicts stock prices.  
@@ -14,3 +15,7 @@ Here are a few of my projects:
 - **Project B:**  
   Interactive data visualizations built with Plotly.  
   [GitHub Repo](https://github.com/ds-oliver/projectB)
+
+- **Project C:**  
+  Python automation tool for data cleaning and reporting.  
+  [GitHub Repo](https://github.com/ds-oliver/projectC)

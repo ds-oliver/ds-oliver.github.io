@@ -7,7 +7,6 @@
   <script>
     const client = algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.search_only_api_key }}');
     const index = client.initIndex('{{ site.algolia.index_name }}');
-  
     document.getElementById('search-input').addEventListener('input', function(e) {
       index.search(e.target.value).then(({ hits }) => {
         const results = document.getElementById('search-results');
