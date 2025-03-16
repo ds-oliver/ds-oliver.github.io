@@ -2,20 +2,33 @@
 layout: page
 title: "Projects"
 permalink: /projects/
+description: "Explore Hogan's data science and Python development projects, featuring machine learning, visualizations, and automation."
 ---
 
 # Projects
 
-Here are some of my key projects:
+Here are some of my standout projects:
 
-- **Project A:**  
-  A machine learning project that predicts stock prices.  
-  [GitHub Repo](https://github.com/ds-oliver/projectA) | [Live Demo](https://colab.research.google.com/...)
+## Machine Learning
+### Project A: Stock Price Prediction
+![Stock Prediction Screenshot](/assets/images/projectA.png)
+- **Description**: Developed a predictive model for stock prices using LSTM networks.
+- **Technologies**: Python, TensorFlow, Pandas, Matplotlib
+- **Outcome**: Achieved [X]% accuracy in predictions.
+- [GitHub Repo](https://github.com/ds-oliver/projectA) | [Live Demo](https://colab.research.google.com/...)
 
-- **Project B:**  
-  Interactive data visualizations built with Plotly.  
-  [GitHub Repo](https://github.com/ds-oliver/projectB)
+## Data Visualization
+### Project B: Interactive Dashboards with Plotly
+![Dashboard Screenshot](/assets/images/projectB.png)
+- **Description**: Created interactive dashboards to visualize complex datasets.
+- **Technologies**: Python, Plotly, Dash
+- **Outcome**: Enhanced data accessibility for non-technical stakeholders.
+- [GitHub Repo](https://github.com/ds-oliver/projectB)
 
-- **Project C:**  
-  Python automation tool for data cleaning and reporting.  
-  [GitHub Repo](https://github.com/ds-oliver/projectC)
+## Automation
+### Project C: Data Cleaning Automation Tool
+![Automation Tool Screenshot](/assets/images/projectC.png)
+- **Description**: Built a Python tool to automate data cleaning and reporting tasks.
+- **Technologies**: Python, Pandas, Openpyxl
+- **Outcome**: Reduced data processing time by [X]%.
+- [GitHub Repo](https://github.com/ds-oliver/projectC)
