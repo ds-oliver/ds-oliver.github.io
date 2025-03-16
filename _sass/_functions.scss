@@ -2,4 +2,20 @@
 @function pxToRem($px, $base: 16) {
     @return #{$px / $base}rem;
   }
+
+  @function darken($color, $amount: 10%) {
+    @return adjust-color($color, $lightness: -$amount);
+  }
   
+  @function lighten($color, $amount: 10%) {
+    @return adjust-color($color, $lightness: $amount);
+  }
+
+  @function adjust-color($color, $lightness: 0, $saturation: 0, $hue: 0) {
+    @return color.adjust($color, $lightness: $lightness, $saturation: $saturation, $hue: $hue);
+  }
+  
+
+  @function color-adjust($color, $lightness: 0, $saturation: 0, $hue: 0) {
+    @return adjust-color($color, $lightness: $lightness, $saturation: $saturation, $hue: $hue);
+  }
