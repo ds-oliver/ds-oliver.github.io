@@ -1,64 +1,39 @@
----
-layout: nil
----
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | {{ site.title }}</title>
-    {% seo %}
-    {% include head.html %}
-    {% include head-custom.html %}
-    <!-- JSON-LD structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "{{ site.title }}",
-      "url": "{{ site.url | append: site.baseurl }}",
-      "logo": "{{ site.url | append: '/assets/images/site-logo.png' }}"
-    }
-    </script>
-  </head>
-  <body>
-    <!-- Skip Link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header role="banner">
-      <nav role="navigation" aria-label="Primary Navigation">
-        <ul>
-          <li><a href="/about/" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
-          <li><a href="/projects/" {% if page.url == '/projects/' %}aria-current="page"{% endif %}>Projects</a></li>
-          <li><a href="/blog/" {% if page.url == '/blog/' %}aria-current="page"{% endif %}>Blog</a></li>
-          <li><a href="/contact/" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
-          <li><a href="/resume/" {% if page.url == '/resume/' %}aria-current="page"{% endif %}>Resume</a></li>
-        </ul>
-      </nav>
-      <!-- Dark/Light Mode Toggle -->
-      <button id="toggle-mode" aria-label="Toggle Dark/Light Mode">Toggle Mode</button>
-    </header>
-
-    <main id="main-content" role="main">
-      {{ content }}
-    </main>
-
-    <footer role="contentinfo">
-      <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-    </footer>
-
-    <script src="/assets/js/analytics.js"></script>
-    <script src="/assets/js/custom.js"></script>
-    <script src="/assets/js/interactions.js"></script>
-    <script>
-      // Dark/Light Mode Toggle with Persistence
-      const toggleBtn = document.getElementById('toggle-mode');
-      toggleBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-      });
-      if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-      }
-    </script>
-  </body>
-</html>
+<!-- _layouts/default.html -->
+<header class="sticky-header" role="banner">
+  <div class="logo-container">
+    <a href="/" class="logo-link">
+      <img src="/assets/images/site-logo.png" alt="Site Logo" class="logo-img">
+      <span class="logo-text">ds-oliver</span>
+    </a>
+  </div>
+  
+  <nav role="navigation" aria-label="Primary Navigation" class="main-nav">
+    <button class="menu-toggle" aria-label="Toggle navigation menu">
+      <span class="hamburger"></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/about/" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
+      <li><a href="/projects/" {% if page.url == '/projects/' %}aria-current="page"{% endif %}>Projects</a></li>
+      <li><a href="/blog/" {% if page.url == '/blog/' %}aria-current="page"{% endif %}>Blog</a></li>
+      <li><a href="/contact/" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
+      <li><a href="/resume/" {% if page.url == '/resume/' %}aria-current="page"{% endif %}>Resume</a></li>
+    </ul>
+  </nav>
+  
+  <div class="header-actions">
+    <button id="toggle-mode" aria-label="Toggle Dark/Light Mode" class="mode-toggle">
+      <span class="icon-sun"></span>
+      <span class="icon-moon"></span>
+    </button>
+    <button class="search-toggle" aria-label="Toggle search">
+      <span class="icon-search"></span>
+    </button>
+  </div>
+  
+  <div class="search-overlay">
+    {% include search.html %}
+    <button class="close-search" aria-label="Close search">
+      <span class="icon-close"></span>
+    </button>
+  </div>
+</header>
