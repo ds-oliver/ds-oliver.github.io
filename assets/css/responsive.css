@@ -1,11 +1,218 @@
 /* assets/css/responsive.css */
-@media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-    }
-    
-    header, footer {
-      text-align: center;
-    }
+/* ================= Mobile-First Responsive Design ================= */
+/* Base mobile styles (default) */
+:root {
+  --nav-item-padding: 1rem;
+  --mobile-breakpoint: 576px;
+  --tablet-breakpoint: 768px;
+  --desktop-breakpoint: 992px;
+}
+
+/* Core responsive elements */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navigation responsiveness */
+nav ul {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+nav li {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+/* Project grid adjustments */
+.grid {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* ================= Media Queries ================= */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
-  
+
+  nav li {
+    flex: 0 1 auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  :root {
+    --nav-item-padding: 1.5rem;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    flex-wrap: nowrap;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  /* Project grid for tablets */
+  .grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  main {
+    max-width: 1200px;
+    padding: 0 2rem;
+  }
+
+  /* Enhanced grid layout */
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  /* Navigation hover effects */
+  nav a {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+  }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+/* ================= Special Cases ================= */
+/* Mobile menu toggle (hidden by default) */
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile menu handling */
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: block;
+    margin: 1rem auto;
+  }
+
+  nav ul {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Dark mode toggle positioning */
+  #toggle-mode {
+    margin-top: 1rem;
+  }
+}
+
+/* Form responsiveness */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, textarea, button {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+/* Typography adjustments */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .card h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Touch target sizing */
+button, .btn, nav a {
+  min-width: 48px;
+  min-height: 48px;
+}
+
+/* Print styles */
+@media print {
+  nav, footer, .no-print {
+    display: none !important;
+  }
+
+  .card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #0000ff;
+    --secondary-color: #000000;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Aspect ratio protection */
+.container {
+  container-type: inline-size;
+}
+
+@container (min-width: 380px) {
+  .card {
+    padding: 1.5rem;
+  }
+}
