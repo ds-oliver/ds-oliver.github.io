@@ -29,12 +29,17 @@ featured_sort: date # date | alphabetical | custom
         <div class="project-links">
           {% if project.github %}
             <a href="{{ project.github }}" class="btn github" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i> Code
+              <i class="fab fa-github"></i> View Code
             </a>
           {% endif %}
           {% if project.demo %}
             <a href="{{ project.demo }}" class="btn demo" target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-external-link-alt"></i> Demo
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          {% endif %}
+          {% if project.website %}
+            <a href="{{ project.website }}" class="btn website" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-globe"></i> Visit Website
             </a>
           {% endif %}
         </div>
