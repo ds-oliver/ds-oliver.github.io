@@ -11,7 +11,7 @@ featured_sort: date # date | alphabetical | custom
   {% for project in site.projects %}
     <article class="project-card">
       <div class="project-image">
-        <img src="{{ project.image | default: '/assets/images/project-default.jpg' }}" alt="{{ project.title }}">
+        <img src="{{ project.image | default: '/assets/images/project-default.jpg' }}" alt="{{ project.title }}" loading="lazy">
       </div>
       <div class="project-content">
         <h3>{{ project.title }}</h3>
@@ -28,12 +28,12 @@ featured_sort: date # date | alphabetical | custom
         <p>{{ project.excerpt }}</p>
         <div class="project-links">
           {% if project.github %}
-            <a href="{{ project.github }}" class="btn github" target="_blank">
+            <a href="{{ project.github }}" class="btn github" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-github"></i> Code
             </a>
           {% endif %}
           {% if project.demo %}
-            <a href="{{ project.demo }}" class="btn demo" target="_blank">
+            <a href="{{ project.demo }}" class="btn demo" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Demo
             </a>
           {% endif %}

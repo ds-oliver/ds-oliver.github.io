@@ -20,14 +20,24 @@ pdf_version: "/assets/pdfs/hogan-resume.pdf"
         <li>Machine Learning</li>
         <li>Statistical Analysis</li>
         <li>Data Visualization</li>
+        <li>Data Cleaning</li>
       </ul>
     </div>
     <div class="skill-category">
       <h3>Programming</h3>
       <ul>
-        <li>Python (Pandas, NumPy)</li>
+        <li>Python (Pandas, NumPy, Scikit-learn)</li>
         <li>SQL</li>
         <li>R</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>Tools & Technologies</h3>
+      <ul>
+        <li>Git & GitHub</li>
+        <li>Docker</li>
+        <li>Jupyter Notebooks</li>
       </ul>
     </div>
   </div>
@@ -43,8 +53,20 @@ pdf_version: "/assets/pdfs/hogan-resume.pdf"
         <span class="duration">2020 - Present</span>
       </div>
       <ul class="achievements">
-        <li>Led team developing predictive maintenance models</li>
-        <li>Improved model accuracy by 22% through feature engineering</li>
+        <li>Led a team of 5 in developing predictive maintenance models</li>
+        <li>Improved model accuracy by 22% through advanced feature engineering</li>
+        <li>Collaborated with cross-functional teams to integrate data-driven insights into business strategies</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <h3>Data Scientist</h3>
+      <div class="timeline-meta">
+        <span class="company">Data Solutions Ltd.</span>
+        <span class="duration">2018 - 2020</span>
+      </div>
+      <ul class="achievements">
+        <li>Developed customer segmentation models to enhance marketing strategies</li>
+        <li>Automated data processing workflows, reducing time by 30%</li>
       </ul>
     </div>
   </div>

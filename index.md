@@ -1,29 +1,42 @@
 <!-- index.md -->
-<div class="project-grid">
-  <div class="project-card">
-    <div class="project-image">
-      <img src="/assets/images/project-a.png" alt="Project A visualization" class="project-thumbnail">
+---
+layout: default
+title: "Data Science Portfolio"
+permalink: /
+---
+
+<section class="intro-section">
+  <h1>Welcome to My Data Science Portfolio</h1>
+  <p>Hi, I'm Oliver, a passionate data scientist with expertise in machine learning, statistical analysis, and data visualization. Explore my projects, resume, and get in touch to learn more about my work.</p>
+</section>
+
+<section class="projects-section">
+  <h2>Featured Projects</h2>
+  <div class="projects-grid">
+    <div class="project-item">
+      <h3>Project 1: Predictive Maintenance</h3>
+      <p>Developed a predictive maintenance model that improved accuracy by 22% through feature engineering.</p>
+      <a href="/projects/predictive-maintenance/" class="project-link">View Project</a>
     </div>
-    <div class="project-content">
-      <h3 class="project-title">Project A</h3>
-      <div class="project-meta">
-        <span class="project-date">March 2023</span>
-        <div class="project-tags">
-          <span class="tag">Machine Learning</span>
-          <span class="tag">Python</span>
-          <span class="tag">Stock Prediction</span>
-        </div>
-      </div>
-      <p class="project-description">Predictive model for stock prices using LSTM networks with 92% accuracy on test data.</p>
-      <div class="project-links">
-        <a href="https://github.com/ds-oliver/project-a" class="btn btn-github" target="_blank">
-          <i class="fab fa-github"></i> Code
-        </a>
-        <a href="/projects/project-a/" class="btn btn-demo" target="_blank">
-          <i class="fas fa-chart-line"></i> Demo
-        </a>
-      </div>
+    <div class="project-item">
+      <h3>Project 2: Customer Segmentation</h3>
+      <p>Implemented a customer segmentation model using clustering techniques to enhance marketing strategies.</p>
+      <a href="/projects/customer-segmentation/" class="project-link">View Project</a>
+    </div>
+    <div class="project-item">
+      <h3>Project 3: Sentiment Analysis</h3>
+      <p>Built a sentiment analysis tool to analyze customer feedback and improve product development.</p>
+      <a href="/projects/sentiment-analysis/" class="project-link">View Project</a>
     </div>
   </div>
-  <!-- More projects -->
-</div>
+</section>
+
+<section class="resume-section">
+  <h2>Resume</h2>
+  <p>Check out my <a href="/resume/">professional resume</a> to learn more about my skills and experience.</p>
+</section>
+
+<section class="contact-section">
+  <h2>Contact</h2>
+  <p>If you'd like to get in touch, feel free to <a href="/contact/">contact me</a>.</p>
+</section>

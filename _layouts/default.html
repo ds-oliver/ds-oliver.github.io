@@ -1,39 +1,50 @@
 <!-- _layouts/default.html -->
-<header class="sticky-header" role="banner">
-  <div class="logo-container">
-    <a href="/" class="logo-link">
-      <img src="/assets/images/site-logo.png" alt="Site Logo" class="logo-img">
-      <span class="logo-text">ds-oliver</span>
-    </a>
-  </div>
-  
-  <nav role="navigation" aria-label="Primary Navigation" class="main-nav">
-    <button class="menu-toggle" aria-label="Toggle navigation menu">
-      <span class="hamburger"></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="/about/" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
-      <li><a href="/projects/" {% if page.url == '/projects/' %}aria-current="page"{% endif %}>Projects</a></li>
-      <li><a href="/blog/" {% if page.url == '/blog/' %}aria-current="page"{% endif %}>Blog</a></li>
-      <li><a href="/contact/" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
-      <li><a href="/resume/" {% if page.url == '/resume/' %}aria-current="page"{% endif %}>Resume</a></li>
-    </ul>
-  </nav>
-  
-  <div class="header-actions">
-    <button id="toggle-mode" aria-label="Toggle Dark/Light Mode" class="mode-toggle">
-      <span class="icon-sun"></span>
-      <span class="icon-moon"></span>
-    </button>
-    <button class="search-toggle" aria-label="Toggle search">
-      <span class="icon-search"></span>
-    </button>
-  </div>
-  
-  <div class="search-overlay">
-    {% include search.html %}
-    <button class="close-search" aria-label="Close search">
-      <span class="icon-close"></span>
-    </button>
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="logo-container">
+            <a href="/" class="logo-link">
+                <img src="/assets/images/logo.png" alt="Logo" class="logo-img">
+                <span>Data Science Portfolio</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="/" aria-current="page">Home</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/resume/">Resume</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button id="toggle-mode" class="mode-toggle">Toggle Dark Mode</button>
+            <button class="search-toggle">Search</button>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} Data Science Portfolio. All rights reserved.</p>
+    </footer>
+
+    <div class="search-overlay">
+        <button class="close-search">Close</button>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button class="search-btn">Search</button>
+        </div>
+    </div>
+
+    <script src="/assets/js/custom.js"></script>
+</body>
+</html>
